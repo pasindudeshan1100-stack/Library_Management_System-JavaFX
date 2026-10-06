@@ -1,0 +1,142 @@
+/* =========================
+   MAIN LOGIN BACKGROUND
+   ========================= */
+
+.root {
+    -fx-background-color: #f4f7fb;
+}
+
+
+/* =========================
+   LOGIN TITLE
+   ========================= */
+
+.login-title {
+    -fx-text-fill: #173b6c;
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Cambria";
+}
+
+
+/* =========================
+   FORM LABELS
+   ========================= */
+
+.form-label {
+    -fx-text-fill: #172033;
+    -fx-font-size: 17px;
+    -fx-font-weight: bold;
+    -fx-font-style: italic;
+}
+
+
+/* =========================
+   TEXT FIELDS
+   ========================= */
+
+.login-field {
+    -fx-background-color: white;
+
+    -fx-border-color: #b8c5d6;
+    -fx-border-width: 1.5px;
+
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+
+    -fx-padding: 8px 12px;
+
+    -fx-font-size: 14px;
+}
+
+
+/* WHEN CLICKED */
+
+.login-field:focused {
+    -fx-border-color: #2563eb;
+    -fx-border-width: 2px;
+
+    -fx-background-color: #ffffff;
+}
+
+
+/* =========================
+   LOGIN BUTTON
+   ========================= */
+
+.login-button {
+    -fx-background-color: #2563eb;
+
+    -fx-text-fill: white;
+
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+
+    -fx-cursor: hand;
+}
+
+
+/* LOGIN HOVER */
+
+.login-button:hover {
+    -fx-background-color: #1d4ed8;
+}
+
+
+/* LOGIN PRESS */
+
+.login-button:pressed {
+    -fx-background-color: #1e40af;
+}
+
+
+/* =========================
+   CLEAR BUTTON
+   ========================= */
+
+.clear-button {
+    -fx-background-color: #e5e7eb;
+
+    -fx-text-fill: #1f2937;
+
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+
+    -fx-cursor: hand;
+}
+
+
+/* CLEAR HOVER */
+
+.clear-button:hover {
+    -fx-background-color: #d1d5db;
+}
+
+
+/* CLEAR PRESS */
+
+.clear-button:pressed {
+    -fx-background-color: #9ca3af;
+}
+
+
+/* =========================
+   IMAGE
+   ========================= */
+
+.login-image {
+    -fx-effect: dropshadow(
+        gaussian,
+        rgba(0,0,0,0.20),
+        10,
+        0.3,
+        0,
+        4
+    );
+}

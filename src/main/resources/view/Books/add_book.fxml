@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="451.0" prefWidth="390.0" styleClass="clear-button" stylesheets="@../css/Book.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Books.AddBookController">
+   <children>
+      <Label alignment="CENTER" prefHeight="68.0" prefWidth="400.0" styleClass="title-label" stylesheets="@../css/Book.css" text="ADD BOOK">
+         <font>
+            <Font name="System Bold Italic" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="83.0" styleClass="form-label" stylesheets="@../css/Book.css" text="Book ID/ISBN">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="130.0" styleClass="form-label" stylesheets="@../css/Book.css" text="Book Title">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="177.0" styleClass="form-label" stylesheets="@../css/Book.css" text="Author">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="225.0" styleClass="form-label" stylesheets="@../css/Book.css" text="Category">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="45.0" layoutY="274.0" styleClass="form-label" stylesheets="@../css/Book.css" text="Published Year">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="49.0" layoutY="318.0" styleClass="form-label" stylesheets="@../css/Book.css" text="Quantity">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtId" layoutX="189.0" layoutY="80.0" styleClass="form-field" stylesheets="@../css/Book.css" />
+      <TextField fx:id="txtTitle" layoutX="189.0" layoutY="127.0" styleClass="form-field" stylesheets="@../css/Book.css" />
+      <TextField fx:id="txtAuthor" layoutX="189.0" layoutY="173.0" styleClass="form-field" stylesheets="@../css/Book.css" />
+      <TextField fx:id="txtCategory" layoutX="189.0" layoutY="222.0" styleClass="form-field" stylesheets="@../css/Book.css" />
+      <TextField fx:id="txtYear" layoutX="189.0" layoutY="269.0" styleClass="form-field" stylesheets="@../css/Book.css" />
+      <TextField fx:id="txtQuantity" layoutX="189.0" layoutY="313.0" styleClass="form-field" stylesheets="@../css/Book.css" />
+      <Button fx:id="AddBtn" layoutX="65.0" layoutY="397.0" mnemonicParsing="false" onAction="#btnAddOnAction" styleClass="add-button" stylesheets="@../css/Book.css" text="ADD" />
+      <Button fx:id="ClearBtn" layoutX="272.0" layoutY="397.0" mnemonicParsing="false" onAction="#btnClearOnAction" styleClass="add-button" stylesheets="@../css/Book.css" text="CLEAR" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,62 @@
+/* MAIN BACKGROUND */
+.root {
+    -fx-background-color: #f5f7fb;
+}
+
+
+/* TITLE */
+.title-label {
+    -fx-text-fill: #1e3a8a;
+    -fx-font-size: 32px;
+    -fx-font-weight: bold;
+    -fx-font-style: italic;
+}
+
+
+/* LABELS */
+.form-label {
+    -fx-text-fill: #111827;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+
+/* TEXT FIELDS */
+.form-field {
+    -fx-background-color: white;
+    -fx-border-color: #cbd5e1;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+
+    -fx-padding: 7px 10px;
+    -fx-font-size: 14px;
+}
+
+.form-field:focused {
+    -fx-border-color: #2563eb;
+    -fx-border-width: 2px;
+}
+
+
+/* REGISTER BUTTON */
+.register-button {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+
+    -fx-cursor: hand;
+}
+
+.register-button:hover {
+    -fx-background-color: #1d4ed8;
+}
+
+.register-button:pressed {
+    -fx-background-color: #1e40af;
+}

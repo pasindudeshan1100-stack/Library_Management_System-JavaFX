@@ -1,0 +1,127 @@
+/* =========================
+   MAIN BACKGROUND
+   ========================= */
+
+.anchor-pane {
+    -fx-background-color: #f4f7fb;
+}
+
+
+/* =========================
+   TITLE
+   ========================= */
+
+.label {
+    -fx-text-fill: #222222;
+}
+
+
+/* First Label - ISSUE BOOK */
+.label:first-child {
+    -fx-text-fill: #1f2937;
+}
+
+
+/* =========================
+   COMBO BOX
+   ========================= */
+
+.combo-box {
+    -fx-background-color: white;
+    -fx-border-color: #cfd6df;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+
+    -fx-font-size: 14px;
+    -fx-padding: 5px;
+}
+
+.combo-box:hover {
+    -fx-border-color: #2563eb;
+}
+
+.combo-box:focused {
+    -fx-border-color: #2563eb;
+    -fx-border-width: 2px;
+}
+
+
+/* =========================
+   TEXT FIELD
+   ========================= */
+
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #cfd6df;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+
+    -fx-font-size: 14px;
+    -fx-padding: 8px;
+}
+
+.text-field:hover {
+    -fx-border-color: #2563eb;
+}
+
+.text-field:focused {
+    -fx-border-color: #2563eb;
+    -fx-border-width: 2px;
+}
+
+
+/* =========================
+   FORM LABELS
+   ========================= */
+
+.label {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #374151;
+}
+
+
+/* =========================
+   ISSUE BOOK BUTTON
+   ========================= */
+
+.button {
+    -fx-background-color: #2563eb;
+    -fx-text-fill: white;
+
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #1d4ed8;
+}
+
+.button:pressed {
+    -fx-background-color: #1e40af;
+}
+/* Search Bar */
+.search-bar {
+    -fx-background-color: transparent;
+    -fx-border-color: #333333;
+    -fx-border-width: 1.5px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+
+    -fx-padding: 8px 12px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #222222;
+    -fx-prompt-text-fill: #777777;
+}
+
+.search-bar:focused {
+    -fx-border-color: #111111;
+    -fx-border-width: 2px;
+}
