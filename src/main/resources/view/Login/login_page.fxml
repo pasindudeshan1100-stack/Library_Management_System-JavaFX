@@ -15,16 +15,16 @@
          <image>
             <Image url="@../../images/img.png" />
          </image></ImageView>
-      <TextField layoutX="376.0" layoutY="157.0" styleClass="login-field" stylesheets="@../css/Style.css" />
+      <TextField fx:id="txtName" layoutX="376.0" layoutY="157.0" styleClass="login-field" stylesheets="@../css/Style.css" />
       <Button layoutX="370.0" layoutY="392.0" mnemonicParsing="false" onAction="#LoginbtnOnAction" styleClass="login-button" stylesheets="@../css/Style.css" text="Login" />
       <Label layoutX="370.0" layoutY="27.0" styleClass="login-title" stylesheets="@../css/Style.css" text="Welcome !">
          <font>
             <Font name="Cambria Math" size="36.0" />
          </font>
       </Label>
-      <Button layoutX="500.0" layoutY="392.0" mnemonicParsing="false" styleClass="login-button" stylesheets="@../css/Style.css" text="Clear" />
+      <Button layoutX="500.0" layoutY="392.0" mnemonicParsing="false" onAction="#ClearbtnOnAction" styleClass="login-button" stylesheets="@../css/Style.css" text="Clear" />
       <Label layoutX="376.0" layoutY="115.0" styleClass="form-label" stylesheets="@../css/Style.css" text="User name" />
       <Label layoutX="379.0" layoutY="226.0" styleClass="form-label" stylesheets="@../css/Style.css" text="Password" />
-      <PasswordField layoutX="377.0" layoutY="270.0" styleClass="login-field" stylesheets="@../css/Style.css" />
+      <PasswordField fx:id="txtPassword" layoutX="377.0" layoutY="270.0" styleClass="login-field" stylesheets="@../css/Style.css" />
    </children>
 </AnchorPane>
