@@ -8,19 +8,15 @@
 <?import javafx.scene.layout.VBox?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/home.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Dashboard.HomePageController">
-    <HBox prefHeight="70.0" prefWidth="901.0" stylesheets="@../css/home.css">
+    <HBox prefHeight="70.0" prefWidth="901.0" styleClass="sidebar" stylesheets="@../css/home.css">
 
         <Label styleClass="header-title" stylesheets="@../css/home.css" text="📚 Library Management System" />
-      <styleClass>
-         <String fx:value="menu-button" />
-         <String fx:value="logout-button" />
-      </styleClass>
 
     </HBox>
 
 
     <!-- Sidebar -->
-    <VBox layoutX="0.0" layoutY="70.0" prefHeight="580.0" prefWidth="220.0" spacing="15.0" styleClass="sidebar" stylesheets="@../css/home.css">
+    <VBox layoutX="0.0" layoutY="78.0" prefHeight="572.0" prefWidth="220.0" spacing="15.0" styleClass="sidebar" stylesheets="@../css/home.css">
 
         <Label styleClass="menu-title" text="MENU" />
 
