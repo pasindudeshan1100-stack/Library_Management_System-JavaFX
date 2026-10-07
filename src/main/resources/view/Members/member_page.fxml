@@ -6,56 +6,28 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="492.0" prefWidth="630.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Members.MemberPageController">
-    <HBox layoutX="0" layoutY="0" prefHeight="70" prefWidth="761.0" styleClass="header" stylesheets="@../css/home.css">
-
-        <Label styleClass="header-title" text="📚 Library Management System" />
-
-    </HBox>
-
-
-    <!-- SIDEBAR -->
-
-    <VBox layoutX="0" layoutY="70" prefHeight="422.0" prefWidth="220" spacing="15" styleClass="sidebar" stylesheets="@../css/home.css">
-
-        <Label styleClass="menu-title" text="MENU" />
-
-        <Button onAction="#openDashboard" styleClass="menu-button" text="Dashboard" />
-
-        <Button styleClass="menu-button" text="📖  Books" />
-
-        <Button onAction="#openMembers" styleClass="menu-button" text="👥  Members" />
-
-        <Button onAction="#openIssueBook" styleClass="menu-button" text="📤  Issue Book" />
-
-        <Button onAction="#openReturnBook" styleClass="menu-button" text="📥  Return Book" />
-
-        <Button onAction="#openHistory" styleClass="menu-button" text="📋  Borrowing History" />
-
-    </VBox>
-   <Label layoutX="251.0" layoutY="87.0" text="Members">
+<AnchorPane prefHeight="506.0" prefWidth="688.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Members.MemberPageController">
+   <Label alignment="CENTER" prefHeight="82.0" prefWidth="688.0" style="-fx-background-color: #e7af36;" text="Members" textFill="#ecebe9">
       <font>
-         <Font name="System Bold" size="24.0" />
+         <Font name="System Bold" size="36.0" />
       </font>
    </Label>
-   <Label layoutX="251.0" layoutY="122.0" text="Manage Members" />
-   <TextField layoutX="251.0" layoutY="152.0" prefHeight="34.0" prefWidth="390.0" promptText="Enter your Member Id" />
-   <Button layoutX="664.0" layoutY="153.0" mnemonicParsing="false" styleClass="login-button" stylesheets="@../css/Style.css" text="Search" />
-   <TableView layoutX="248.0" layoutY="210.0" prefHeight="200.0" prefWidth="482.0">
+   <Label layoutX="293.0" layoutY="55.0" text="Manage Members" textFill="#f7f2f2" />
+   <TextField layoutX="65.0" layoutY="109.0" prefHeight="34.0" prefWidth="461.0" promptText="Enter your Member Id" />
+   <Button layoutX="546.0" layoutY="110.0" mnemonicParsing="false" styleClass="login-button" stylesheets="@../css/Style.css" text="Search" />
+   <TableView layoutX="33.0" layoutY="173.0" prefHeight="235.0" prefWidth="616.0">
      <columns>
        <TableColumn prefWidth="75.0" text="Member ID" />
-       <TableColumn prefWidth="114.4000244140625" text="Full Name" />
-         <TableColumn prefWidth="130.4000244140625" text="Email" />
-         <TableColumn prefWidth="99.2000732421875" text="Phone Number" />
-         <TableColumn prefWidth="60.00003662109373" text="Adress" />
+       <TableColumn prefWidth="145.5999755859375" text="Full Name" />
+         <TableColumn prefWidth="133.60003662109375" text="Email" />
+         <TableColumn prefWidth="124.79998779296875" text="Phone Number" />
+         <TableColumn prefWidth="136.0" text="Adress" />
      </columns>
    </TableView>
-   <Button layoutX="312.0" layoutY="475.0" mnemonicParsing="false" styleClass="login-button" stylesheets="@../css/Style.css" text="Add " />
-   <Button layoutX="514.0" layoutY="475.0" mnemonicParsing="false" styleClass="login-button" stylesheets="@../css/Style.css" text="Delete" />
-   <Button layoutX="409.0" layoutY="475.0" mnemonicParsing="false" styleClass="login-button" stylesheets="@../css/Style.css" text="Update" />
+   <Button layoutX="207.0" layoutY="452.0" mnemonicParsing="false" onAction="#AddMemberbtnOnAction" styleClass="login-button" stylesheets="@../css/Style.css" text="Add " />
+   <Button layoutX="387.0" layoutY="452.0" mnemonicParsing="false" styleClass="login-button" stylesheets="@../css/Style.css" text="Delete" />
+   <Button layoutX="288.0" layoutY="452.0" mnemonicParsing="false" styleClass="login-button" stylesheets="@../css/Style.css" text="Update" />
 
 </AnchorPane>

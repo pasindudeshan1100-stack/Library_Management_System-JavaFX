@@ -20,17 +20,17 @@
 
         <Label styleClass="menu-title" text="MENU" />
 
-        <Button styleClass="menu-button" text="Dashboard" />
+        <Button onAction="#DashboardbtnOnAction" styleClass="menu-button" text="Dashboard" />
 
-        <Button styleClass="menu-button" text="📖  Books" />
+        <Button onAction="#BooksbtnOnAction" styleClass="menu-button" text="📖  Books" />
 
-        <Button styleClass="menu-button" text="👥  Members" />
+        <Button onAction="#MemberbtnOnAction" styleClass="menu-button" text="👥  Members" />
 
-        <Button styleClass="menu-button" text="📤  Issue Book" />
+        <Button onAction="#IssuebtnOnAction" styleClass="menu-button" text="📤  Issue Book" />
 
-        <Button styleClass="menu-button" text="📥  Return Book" />
+        <Button onAction="#ReturnbtnOnAction" styleClass="menu-button" text="📥  Return Book" />
 
-        <Button styleClass="menu-button" text="📋  Borrowing History" />
+        <Button onAction="#HistorybtnOnAction" styleClass="menu-button" text="📋  Borrowing History" />
 
     </VBox>
 

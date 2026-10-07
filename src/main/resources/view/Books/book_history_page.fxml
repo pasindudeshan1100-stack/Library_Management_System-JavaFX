@@ -16,17 +16,17 @@
 
         <Label styleClass="menu-title" stylesheets="@../css/Style.css" text="MENU" />
 
-        <Button onAction="#openDashboard" styleClass="menu-button" text="Dashboard" />
+        <Button onAction="#Dashboardbtn2OnAction" styleClass="menu-button" text="Dashboard" />
 
-        <Button styleClass="menu-button" text="📖  Books" />
+        <Button onAction="#Booksbtn2OnAction" styleClass="menu-button" text="📖  Books" />
 
-        <Button onAction="#openMembers" styleClass="menu-button" text="👥  Members" />
+        <Button onAction="#Memberbtn2OnAction" styleClass="menu-button" text="👥  Members" />
 
-        <Button onAction="#openIssueBook" styleClass="menu-button" text="📤  Issue Book" />
+        <Button onAction="#Issuebtn2OnAction" styleClass="menu-button" text="📤  Issue Book" />
 
-        <Button onAction="#openReturnBook" styleClass="menu-button" text="📥  Return Book" />
+        <Button onAction="#Returnbtn2OnAction" styleClass="menu-button" text="📥  Return Book" />
 
-        <Button onAction="#openHistory" styleClass="menu-button" text="📋  Borrowing History" />
+        <Button onAction="#Historbtn2OnAction" styleClass="menu-button" text="📋  Borrowing History" />
 
     </VBox>
    <Label layoutY="-6.0" prefHeight="78.0" prefWidth="758.0" stylesheets="@../css/home.css" text="📚 Library Management System">
@@ -35,7 +35,7 @@
          <String fx:value="header-title" />
       </styleClass>
    </Label>
-   <TableView layoutX="240.0" layoutY="248.0" prefHeight="200.0" prefWidth="482.0">
+   <TableView layoutX="240.0" layoutY="248.0" prefHeight="322.0" prefWidth="482.0">
      <columns>
        <TableColumn prefWidth="75.0" text="Member ID" />
        <TableColumn prefWidth="106.4000244140625" text="Book Title" />
