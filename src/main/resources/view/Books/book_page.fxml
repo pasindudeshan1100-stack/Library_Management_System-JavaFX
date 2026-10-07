@@ -18,20 +18,18 @@
 
     <!-- MAIN CONTENT -->
 
-    <VBox layoutX="54.0" layoutY="121.0" prefHeight="101.0" prefWidth="838.0" spacing="20">
+    <VBox layoutX="54.0" layoutY="121.0" prefHeight="102.0" prefWidth="730.0" spacing="20">
 
         <!-- TITLE -->
 
-        <HBox alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="783.0">
+        <HBox alignment="CENTER_LEFT" prefHeight="54.0" prefWidth="746.0">
    
-            <TextField fx:id="searchField" prefHeight="38.0" prefWidth="722.0" promptText="Search by book title, author or ISBN..." styleClass="header">
+            <TextField fx:id="searchField" prefHeight="38.0" prefWidth="683.0" promptText="Search by book title, author or ISBN..." styleClass="header">
             <stylesheets>
                <URL value="@../css/Book.css" />
                <URL value="@../css/IssueBook.css" />
             </stylesheets>
          </TextField>
-      
-                              <Button prefHeight="34.0" prefWidth="78.0" styleClass="add-button" stylesheets="@../css/Book.css" text="Search" />
 
         </HBox>
 
@@ -43,7 +41,7 @@
     </VBox>
    <DialogPane layoutX="274.0" layoutY="334.0" />
 
-                        <Button layoutX="328.0" layoutY="535.0" prefHeight="26.0" prefWidth="87.0" styleClass="add-button" stylesheets="@../css/Book.css" text="Add" />
+                        <Button layoutX="328.0" layoutY="535.0" onAction="#AddBooksbtnOnAction" prefHeight="26.0" prefWidth="87.0" styleClass="add-button" stylesheets="@../css/Book.css" text="Add" />
    <Button layoutX="429.0" layoutY="535.0" prefHeight="28.0" prefWidth="87.0" styleClass="add-button" stylesheets="@../css/Book.css" text="Update" />
    <Button layoutX="530.0" layoutY="535.0" prefHeight="28.0" prefWidth="87.0" styleClass="add-button" stylesheets="@../css/Book.css" text="Delete" />
 
@@ -86,4 +84,6 @@
       </styleClass>
 
         </TableView>
+
+                              <Button layoutX="777.0" layoutY="131.0" prefHeight="34.0" prefWidth="78.0" styleClass="add-button" stylesheets="@../css/Book.css" text="Search" />
 </AnchorPane>

@@ -49,7 +49,7 @@
       <TextField fx:id="txtCategory" layoutX="189.0" layoutY="222.0" styleClass="form-field" stylesheets="@../css/Book.css" />
       <TextField fx:id="txtYear" layoutX="189.0" layoutY="269.0" styleClass="form-field" stylesheets="@../css/Book.css" />
       <TextField fx:id="txtQuantity" layoutX="189.0" layoutY="313.0" styleClass="form-field" stylesheets="@../css/Book.css" />
-      <Button fx:id="AddBtn" layoutX="65.0" layoutY="397.0" mnemonicParsing="false" onAction="#btnAddOnAction" styleClass="add-button" stylesheets="@../css/Book.css" text="ADD" />
-      <Button fx:id="ClearBtn" layoutX="272.0" layoutY="397.0" mnemonicParsing="false" onAction="#btnClearOnAction" styleClass="add-button" stylesheets="@../css/Book.css" text="CLEAR" />
+      <Button fx:id="AddBtn" layoutX="65.0" layoutY="397.0" mnemonicParsing="false" styleClass="add-button" stylesheets="@../css/Book.css" text="Add" />
+      <Button fx:id="ClearBtn" layoutX="272.0" layoutY="397.0" mnemonicParsing="false" styleClass="add-button" stylesheets="@../css/Book.css" text="Clear" />
    </children>
 </AnchorPane>
