@@ -1,26 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import java.lang.String?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" stylesheets="@../css/home.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Dashboard.HomePageController">
-    <HBox prefHeight="70.0" prefWidth="901.0" styleClass="sidebar" stylesheets="@../css/home.css">
-
-        <Label styleClass="header-title" stylesheets="@../css/home.css" text="📚 Library Management System" />
-
-    </HBox>
-
-
+    
     <!-- Sidebar -->
-    <VBox layoutX="0.0" layoutY="78.0" prefHeight="572.0" prefWidth="220.0" spacing="15.0" styleClass="sidebar" stylesheets="@../css/home.css">
+    <VBox layoutX="0.0" layoutY="155.0" prefHeight="496.0" prefWidth="220.0" spacing="15.0" styleClass="sidebar" stylesheets="@../css/home.css">
 
-        <Label styleClass="menu-title" text="MENU" />
+        <Label styleClass="menu-title" text="MENU">
+         <VBox.margin>
+            <Insets top="15.0" />
+         </VBox.margin></Label>
 
-        <Button onAction="#DashboardbtnOnAction" styleClass="menu-button" text="Dashboard" />
+        <Button onAction="#DashboardbtnOnAction" styleClass="menu-button" text="🏠 Dashboard" />
 
         <Button onAction="#BooksbtnOnAction" styleClass="menu-button" text="📖  Books" />
 
@@ -31,24 +30,71 @@
         <Button onAction="#ReturnbtnOnAction" styleClass="menu-button" text="📥  Return Book" />
 
         <Button onAction="#HistorybtnOnAction" styleClass="menu-button" text="📋  Borrowing History" />
+   
+        <Button fx:id="logoutButton" styleClass="logout-button" stylesheets="@../css/home.css" text="Logout">
+         <VBox.margin>
+            <Insets top="25.0" />
+         </VBox.margin>
+      </Button>
 
     </VBox>
 
+    <HBox alignment="CENTER_LEFT" layoutY="-5.0" maxWidth="Infinity" prefHeight="134.0" prefWidth="1050.0" spacing="22" styleClass="welcome-header">
 
+        <!-- Book Icon -->
+        <Label styleClass="welcome-icon" text="P">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+
+        <!-- Welcome Text -->
+        <VBox alignment="CENTER_LEFT" spacing="8" styleClass="welcome-text" stylesheets="@../css/home.css" HBox.hgrow="ALWAYS">
+
+            <HBox alignment="CENTER_LEFT" prefHeight="38.0" prefWidth="534.0" spacing="10">
+                <Label styleClass="welcome-text" text="Good Afternoon," />
+
+                <Label fx:id="lblUserName" styleClass="welcome-text" text="Pasindu!" />
+      
+                <Label styleClass="welcome-username" stylesheets="@../css/home.css" text="👋" textFill="#d4e30b" />
+            </HBox>
+
+            <Label styleClass="welcome-subtitle" text="Welcome back to Smart Library. Keep going, you're doing great!" />
+        </VBox>
+
+        <!-- Divider -->
+        <VBox minHeight="80" prefHeight="80" styleClass="header-divider" />
+
+        <!-- Time Card -->
+        <VBox alignment="CENTER" prefWidth="220.0" spacing="5" styleClass="time-card">
+
+            <Label styleClass="time-title" text="Current Time" />
+
+            <Label fx:id="lblTime" styleClass="time-value" text="02:45 PM" />
+
+            <Label fx:id="lblDate" styleClass="date-value" text="Oct 19, 2026" />
+        </VBox>
+
+    </HBox>
     <!-- Main Content -->
-    <VBox layoutX="250.0" layoutY="100.0" prefWidth="800.0" spacing="25.0" stylesheets="@../css/home.css">
+    <VBox layoutX="303.0" layoutY="187.0" prefHeight="422.0" prefWidth="747.0" spacing="25.0" stylesheets="@../css/home.css">
 
-        <Label styleClass="dashboard-title" text="Welcome to Library Dashboard" />
+        <Label prefHeight="50.0" prefWidth="143.0" styleClass="dashboard-title" text="Dashboard">
+         <VBox.margin>
+            <Insets bottom="-20.0" />
+         </VBox.margin></Label>
 
-        <Label styleClass="dashboard-subtitle" text="Manage books, members and borrowing records" />
+        <Label prefHeight="40.0" prefWidth="320.0" styleClass="dashboard-subtitle" text="Manage books, members and borrowing records">
+         <VBox.margin>
+            <Insets bottom="10.0" />
+         </VBox.margin></Label>
 
 
         <!-- First Row -->
         <HBox spacing="25.0">
 
-            <VBox prefHeight="150.0" prefWidth="360.0" styleClass="dashboard-card" stylesheets="@../css/home.css">
+            <VBox prefHeight="200.0" prefWidth="200.0" spacing="10.0" styleClass="dashboard-card" stylesheets="@../css/home.css">
 
-                <Label styleClass="card-icon" text="📚" />
+                <Label alignment="CENTER" styleClass="card-icon" text="📚" />
 
                 <Label styleClass="card-title" text="Total Books" />
 
@@ -57,23 +103,23 @@
             </VBox>
 
 
-            <VBox prefHeight="150.0" prefWidth="360.0" styleClass="dashboard-card">
+            <VBox prefHeight="200.0" prefWidth="200.0" styleClass="dashboard-card">
 
                 <Label styleClass="card-icon" text="👥" />
 
-                <Label styleClass="card-title" text="Total Members" />
+                <Label styleClass="card-title" text="Total Members">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin></Label>
 
-                <Label styleClass="card-value" text="120" />
+                <Label styleClass="card-value" text="120">
+               <VBox.margin>
+                  <Insets top="12.0" />
+               </VBox.margin></Label>
 
             </VBox>
 
-        </HBox>
-
-
-        <!-- Second Row -->
-        <HBox spacing="25.0">
-
-            <VBox prefHeight="150.0" prefWidth="360.0" styleClass="dashboard-card">
+            <VBox prefHeight="200.0" prefWidth="200.0" spacing="10.0" styleClass="dashboard-card">
 
                 <Label styleClass="card-icon" text="📕" />
 
@@ -83,16 +129,39 @@
 
             </VBox>
 
+        </HBox>
 
-            <VBox prefHeight="150.0" prefWidth="360.0" styleClass="dashboard-card">
+
+        <!-- Second Row -->
+        <HBox spacing="25.0">
+
+
+            <VBox prefHeight="200.0" prefWidth="200.0" styleClass="dashboard-card">
 
                 <Label styleClass="card-icon" text="⚠" />
 
-                <Label styleClass="card-title" text="Overdue Books" />
+                <Label styleClass="card-title" text="Overdue Books">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin></Label>
 
-                <Label styleClass="card-value" text="8" />
+                <Label styleClass="card-value" text="8">
+               <padding>
+                  <Insets top="10.0" />
+               </padding></Label>
 
             </VBox>
+         <VBox prefHeight="200.0" prefWidth="200.0" styleClass="dashboard-card" stylesheets="@../css/home.css">
+            <children>
+               <Label styleClass="card-icon" stylesheets="@../css/home.css" text="🔄" />
+               <Label styleClass="card-title" stylesheets="@../css/home.css" text="Return Books" />
+               <Label text="29">
+                  <VBox.margin>
+                     <Insets top="10.0" />
+                  </VBox.margin>
+               </Label>
+            </children>
+         </VBox>
 
         </HBox>
       <styleClass>
@@ -102,6 +171,4 @@
       </styleClass>
 
     </VBox>
-
-     <Button fx:id="logoutButton" layoutX="926.0" layoutY="15.0" styleClass="logout-button" stylesheets="@../css/home.css" text="Logout" />
 </AnchorPane>

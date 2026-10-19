@@ -119,3 +119,207 @@
     -fx-text-fill: #1e3a5f;
     -fx-font-weight: bold;
 }
+/* Main Sidebar */
+.sidebar {
+    -fx-background-color: linear-gradient(
+        to bottom,
+        #0F4C81,
+        #123B68,
+        #0B2545
+    );
+    -fx-padding: 20px 12px;
+    -fx-spacing: 12px;
+}
+
+/* Sidebar Title */
+.sidebar-title {
+    -fx-text-fill: white;
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 12px 25px 12px;
+}
+
+/* Sidebar Buttons */
+.sidebar-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #EAF4FF;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER-LEFT;
+    -fx-padding: 12px 16px;
+    -fx-pref-width: 195px;
+    -fx-background-radius: 10px;
+    -fx-cursor: hand;
+}
+
+/* Hover Effect */
+/* Sidebar */
+/* Sidebar */
+/* Blue Sidebar */
+.sidebar {
+    -fx-background-color: #2454C6;
+}
+
+/* Red Logout Button */
+.logout-button {
+    -fx-background-color: #E53935;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-pref-width: 195px;
+    -fx-padding: 12px 16px;
+    -fx-cursor: hand;
+}
+
+/* Hover Effect */
+.logout-button:hover {
+    -fx-background-color: #C62828;
+}
+/* Welcome Text */
+/* ===== Welcome Header ===== */
+.welcome-header {
+    -fx-background-color: linear-gradient(
+        to right,
+        #FFFFFF,
+        #F4F8FF
+    );
+    -fx-background-radius: 22px;
+    -fx-border-color: #DCE8FF;
+    -fx-border-radius: 22px;
+    -fx-border-width: 1px;
+    -fx-padding: 25px 30px;
+    -fx-spacing: 22px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-effect: dropshadow(
+        gaussian,
+        rgba(35, 85, 160, 0.12),
+        18, 0.15, 0, 6
+    );
+}
+
+/* ===== Welcome Message ===== */
+.welcome-text {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #123574;
+}
+
+.welcome-subtitle {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 15px;
+    -fx-text-fill: #7186A8;
+}
+
+/* ===== Greeting Icon ===== */
+.welcome-icon {
+    -fx-background-color: #E5F0FF;
+    -fx-background-radius: 50%;
+    -fx-min-width: 85px;
+    -fx-min-height: 85px;
+    -fx-pref-width: 85px;
+    -fx-pref-height: 85px;
+    -fx-alignment: CENTER;
+    -fx-font-size: 38px;
+}
+
+/* ===== Time Card ===== */
+.time-card {
+    -fx-background-color: #F0F6FF;
+    -fx-background-radius: 18px;
+    -fx-padding: 15px 22px;
+    -fx-spacing: 5px;
+    -fx-alignment: CENTER;
+    -fx-min-width: 220px;
+}
+
+.time-title {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 14px;
+    -fx-text-fill: #7186A8;
+}
+
+.time-value {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #123574;
+}
+
+.date-value {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 13px;
+    -fx-text-fill: #7186A8;
+}
+
+/* ===== User Avatar ===== */
+.user-avatar {
+    -fx-background-color: linear-gradient(
+        to bottom right,
+        #72B0FF,
+        #2870E8
+    );
+    -fx-background-radius: 50%;
+    -fx-min-width: 70px;
+    -fx-min-height: 70px;
+    -fx-pref-width: 70px;
+    -fx-pref-height: 70px;
+    -fx-alignment: CENTER;
+    -fx-text-fill: white;
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 27px;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(
+        gaussian,
+        rgba(40, 112, 232, 0.22),
+        10, 0.2, 0, 3
+    );
+}
+
+/* ===== Divider ===== */
+.header-divider {
+    -fx-background-color: #D8E5F8;
+    -fx-pref-width: 2px;
+    -fx-min-width: 2px;
+    -fx-max-width: 2px;
+}
+/* Welcome Header - Square Corners */
+.welcome-header {
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 0;
+    -fx-border-radius: 0;
+    -fx-border-color: #D8E5F8;
+    -fx-border-width: 1px;
+    -fx-padding: 25px 30px;
+    -fx-alignment: CENTER_LEFT;
+    -fx-spacing: 22px;
+}
+
+/* Welcome Text */
+.welcome-text {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #123574;
+}
+
+/* User Name */
+.welcome-username {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2878FF;
+}
+
+/* Yellow Waving Hand Emoji */
+.welcome-emoji {
+    -fx-font-size: 30px;
+}
+
+/* Subtitle */
+.welcome-subtitle {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 15px;
+    -fx-text-fill: #7186A8;
+}
