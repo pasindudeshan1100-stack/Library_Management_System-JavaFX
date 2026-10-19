@@ -1,0 +1,21 @@
+.login-form {
+    -fx-background-color: white;
+    -fx-padding: 20px;
+    -fx-spacing: 12px;
+    -fx-pref-width: 430px;
+    -fx-max-width: 430px;
+    -fx-background-radius: 3px;
+}
+
+.login-form .text-field,
+.login-form .password-field {
+    -fx-pref-height: 40px;
+    -fx-background-color: white;
+    -fx-border-color: #cbd5e1;
+    -fx-text-fill: #222222;
+}
+
+.login-form .button {
+    -fx-background-color: #0866ff;
+    -fx-text-fill: white;
+}
