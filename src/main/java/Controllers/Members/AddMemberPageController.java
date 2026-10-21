@@ -30,6 +30,7 @@ public class AddMemberPageController {
     @FXML
     private TextField txtPhone;
 
+     MemberPageController    memberPageController=new MemberPageController();
     @FXML
     void AddbtnOnAction(ActionEvent event) {
         String fullname=txtFullName.getText();
@@ -45,10 +46,22 @@ public class AddMemberPageController {
         );
     if (isadded){
     new Alert(Alert.AlertType.INFORMATION,"New Member Added Successfully!").show();
+     clearfields();
+    
     }
     else {
         new Alert(Alert.AlertType.ERROR,"Failed to Add Member.").show();
     }
+    }
+
+    private void clearfields() {
+        txtMemberId.clear();
+        txtFullName.clear();
+        txtEmail.clear();
+        txtPhone.clear();
+        txtEmail.clear();
+        txtAddress.clear();      
+
     }
 
     @FXML

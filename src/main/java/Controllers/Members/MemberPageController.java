@@ -96,7 +96,7 @@ public class MemberPageController {
         loadMembers();
         }
 
-    private void loadMembers() {
+    public void loadMembers() {
       try{
           List<Member>memberList=addMemberController.getAllMembers();
           ObservableList<Member> data= FXCollections.observableArrayList(memberList);
@@ -112,6 +112,18 @@ public class MemberPageController {
 
     }
 
+    public void RefreshbtnOnAction(ActionEvent actionEvent) {
+
+    }
+
+    public void SearchbtnOnAction(ActionEvent actionEvent) {
+    }
+
+    public void UpdatebtnOnAction(ActionEvent actionEvent) {
+    }
+
+    public void DeletebtnOnAction(ActionEvent actionEvent) {
+    }
 }
 
 

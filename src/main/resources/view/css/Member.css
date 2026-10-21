@@ -176,3 +176,166 @@
     -fx-font-size: 12px;
     -fx-text-fill: #3563a3;
 }
+```css
+/* ==============================
+   MEMBER PAGE - PROFESSIONAL UI
+   ============================== */
+
+.root {
+    -fx-font-family: "Segoe UI";
+    -fx-background-color: #f4f7fc;
+}
+
+/* Main content */
+.main-container {
+    -fx-background-color: #f4f7fc;
+}
+
+/* Sidebar */
+.sidebar {
+    -fx-background-color: #101c3a;
+    -fx-padding: 25 15 20 15;
+}
+
+.sidebar-title {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+}
+
+.sidebar-subtitle {
+    -fx-text-fill: #9eaccb;
+    -fx-font-size: 12px;
+}
+
+.sidebar-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #c6d1e8;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 13 18;
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+}
+
+.sidebar-button:hover {
+    -fx-background-color: #24365f;
+    -fx-text-fill: white;
+}
+
+.sidebar-button-active {
+    -fx-background-color: #3478f6;
+    -fx-text-fill: white;
+    -fx-background-radius: 10;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 13 18;
+    -fx-cursor: hand;
+}
+
+/* Page heading */
+.page-title {
+    -fx-text-fill: #172442;
+    -fx-font-size: 29px;
+    -fx-font-weight: bold;
+}
+
+.page-subtitle {
+    -fx-text-fill: #7b879d;
+    -fx-font-size: 13px;
+}
+
+/* Summary cards */
+.summary-card {
+    -fx-background-color: white;
+    -fx-background-radius: 16;
+    -fx-padding: 22;
+    -fx-border-color: #e7ecf4;
+    -fx-border-radius: 16;
+    -fx-border-width: 1;
+    -fx-effect: dropshadow(
+        gaussian, rgba(22, 42, 80, 0.06), 12, 0, 0, 3
+    );
+}
+
+.card-title {
+    -fx-text-fill: #77839a;
+    -fx-font-size: 13px;
+}
+
+.card-value {
+    -fx-text-fill: #172442;
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+}
+
+/* Buttons */
+.primary-button {
+    -fx-background-color: #3478f6;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-padding: 12 20;
+    -fx-background-radius: 9;
+    -fx-cursor: hand;
+}
+
+.primary-button:hover {
+    -fx-background-color: #2365dc;
+}
+
+.secondary-button {
+    -fx-background-color: white;
+    -fx-text-fill: #344563;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-padding: 11 18;
+    -fx-background-radius: 9;
+    -fx-border-color: #dce3ef;
+    -fx-border-radius: 9;
+    -fx-cursor: hand;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #edf3ff;
+}
+
+/* Table container */
+.table-container {
+    -fx-background-color: white;
+    -fx-background-radius: 15;
+    -fx-padding: 18;
+    -fx-border-color: #e5eaf3;
+    -fx-border-radius: 15;
+}
+
+/* TableView */
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-table-cell-border-color: #edf0f6;
+    -fx-padding: 5;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #edf3fc;
+    -fx-background-radius: 8 8 0 0;
+}
+
+.table-view .column-header {
+    -fx-background-color: transparent;
+    -fx-size: 43px;
+    -fx-border-color: transparent transparent #e1e8f3 transparent;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: #344563;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 0 10;
+}
+
+.table-row
