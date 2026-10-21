@@ -1,14 +1,50 @@
 package Controllers.Members;
 
+import Model.Member;
+import javafx.beans.property.Property;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.List;
 
 public class MemberPageController {
+
+    private AddMemberController addMemberController=new AddMemberController();
+    @FXML
+    private TableColumn<Member, String> colAdress;
+
+    @FXML
+    private TableColumn<Member, String> colEmail;
+
+    @FXML
+    private TableColumn<Member, String> colMemberId;
+
+    @FXML
+    private TableColumn<Member, String> colName;
+
+    @FXML
+    private TableColumn<Member, String> colPhonenumber;
+
+    @FXML
+    private Button logoutButton;
+
+    @FXML
+    private TableView<Member> tblMembers;
+
+    @FXML
+    private AnchorPane txtAdrss;
 
     @FXML
     void AddMemberbtnOnAction(ActionEvent event) {
@@ -21,6 +57,64 @@ public class MemberPageController {
         stage.show();
     }
 
+    @FXML
+    void BooksbtnOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void DashboardbtnOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void HistorybtnOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void IssuebtnOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void MemberbtnOnAction(ActionEvent event) {
+
+    }
+
+    @FXML
+    void ReturnbtnOnAction(ActionEvent event) {
+
+    }
+    @FXML
+        public void initialize(){
+        colMemberId.setCellValueFactory(new PropertyValueFactory<>("id"));
+        colName.setCellValueFactory(new PropertyValueFactory<>("name"));
+        colEmail.setCellValueFactory(new PropertyValueFactory<>("email"));
+        colPhonenumber.setCellValueFactory(new PropertyValueFactory<>("phonenumber"));
+        colAdress.setCellValueFactory(new PropertyValueFactory<>("adress"));
+        loadMembers();
+        }
+
+    private void loadMembers() {
+      try{
+          List<Member>memberList=addMemberController.getAllMembers();
+          ObservableList<Member> data= FXCollections.observableArrayList(memberList);
+          tblMembers.setItems(data);
+      } catch (Exception e) {
+          Alert alert = new Alert(Alert.AlertType.ERROR);
+          alert.setTitle("Database Error");
+          alert.setHeaderText("Unable to load members");
+          alert.setContentText(e.getMessage());
+          alert.showAndWait();
+        }
+
+
+    }
+
 }
+
+
+
 
 
