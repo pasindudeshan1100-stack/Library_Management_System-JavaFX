@@ -1,5 +1,6 @@
 package Controllers.Books;
 
+import Model.Book;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -14,34 +15,34 @@ import java.io.IOException;
 public class BookPageController {
 
     @FXML
-    private TableColumn<?, ?> actionColumn;
+    private TableColumn<Book, String> actionColumn;
 
     @FXML
-    private TableColumn<?, ?> authorColumn;
+    private TableColumn<Book, String> authorColumn;
 
     @FXML
-    private TableView<?> bookTable;
+    private TableView<Book> bookTable;
 
     @FXML
-    private TableColumn<?, ?> categoryColumn;
+    private TableColumn<Book, String> categoryColumn;
 
     @FXML
-    private TableColumn<?, ?> idColumn;
+    private TableColumn<Book, String> idColumn;
 
     @FXML
-    private TableColumn<?, ?> isbnColumn;
+    private TableColumn<Book, String> isbnColumn;
 
     @FXML
-    private TableColumn<?, ?> quantityColumn;
+    private TableColumn<Book, String> quantityColumn;
 
     @FXML
     private TextField searchField;
 
     @FXML
-    private TableColumn<?, ?> titleColumn;
+    private TableColumn<Book, String> titleColumn;
 
     @FXML
-    private TableColumn<?, ?> yearColumn;
+    private TableColumn<Book, String> yearColumn;
 
     @FXML
     void AddBooksbtnOnAction(ActionEvent event) {

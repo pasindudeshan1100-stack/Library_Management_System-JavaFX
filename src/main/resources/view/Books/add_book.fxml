@@ -1,55 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="451.0" prefWidth="390.0" styleClass="clear-button" stylesheets="@../css/Book.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Books.AddBookController">
-   <children>
-      <Label alignment="CENTER" prefHeight="68.0" prefWidth="400.0" styleClass="title-label" stylesheets="@../css/Book.css" text="ADD BOOK">
-         <font>
-            <Font name="System Bold Italic" size="36.0" />
-         </font>
-      </Label>
-      <Label layoutX="48.0" layoutY="83.0" styleClass="form-label" stylesheets="@../css/Book.css" text="Book ID/ISBN">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="48.0" layoutY="130.0" styleClass="form-label" stylesheets="@../css/Book.css" text="Book Title">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="48.0" layoutY="177.0" styleClass="form-label" stylesheets="@../css/Book.css" text="Author">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="48.0" layoutY="225.0" styleClass="form-label" stylesheets="@../css/Book.css" text="Category">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="45.0" layoutY="274.0" styleClass="form-label" stylesheets="@../css/Book.css" text="Published Year">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="49.0" layoutY="318.0" styleClass="form-label" stylesheets="@../css/Book.css" text="Quantity">
-         <font>
-            <Font size="14.0" />
-         </font>
-      </Label>
-      <TextField fx:id="txtId" layoutX="189.0" layoutY="80.0" styleClass="form-field" stylesheets="@../css/Book.css" />
-      <TextField fx:id="txtTitle" layoutX="189.0" layoutY="127.0" styleClass="form-field" stylesheets="@../css/Book.css" />
-      <TextField fx:id="txtAuthor" layoutX="189.0" layoutY="173.0" styleClass="form-field" stylesheets="@../css/Book.css" />
-      <TextField fx:id="txtCategory" layoutX="189.0" layoutY="222.0" styleClass="form-field" stylesheets="@../css/Book.css" />
-      <TextField fx:id="txtYear" layoutX="189.0" layoutY="269.0" styleClass="form-field" stylesheets="@../css/Book.css" />
-      <TextField fx:id="txtQuantity" layoutX="189.0" layoutY="313.0" styleClass="form-field" stylesheets="@../css/Book.css" />
-      <Button fx:id="AddBtn" layoutX="65.0" layoutY="397.0" mnemonicParsing="false" styleClass="add-button" stylesheets="@../css/Book.css" text="Add" />
-      <Button fx:id="ClearBtn" layoutX="272.0" layoutY="397.0" mnemonicParsing="false" styleClass="add-button" stylesheets="@../css/Book.css" text="Clear" />
-   </children>
+<AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@../css/Book.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Books.AddBookPageController">
+    <children>
+        <VBox spacing="24" AnchorPane.leftAnchor="32" AnchorPane.rightAnchor="32" AnchorPane.topAnchor="30">
+
+            <HBox alignment="CENTER_LEFT" spacing="18">
+                <Label style="-fx-background-color: #e1ecff;                               -fx-padding: 18;                               -fx-background-radius: 14;                               -fx-font-size: 27;" text="📘" />
+                <VBox spacing="5">
+                    <Label style="-fx-font-size: 30;                                   -fx-font-weight: bold;                                   -fx-text-fill: #20365f;" text="Add Book" />
+                    <Label style="-fx-font-size: 15;                                   -fx-text-fill: #607ba9;" text="Add a new book to the library collection" />
+                </VBox>
+            </HBox>
+
+            <HBox spacing="30" style="-fx-background-color: white;                          -fx-background-radius: 14;                          -fx-padding: 28;">
+
+                <VBox spacing="20" HBox.hgrow="ALWAYS">
+
+                    <GridPane hgap="22" vgap="20">
+                        <columnConstraints>
+                            <ColumnConstraints percentWidth="50" />
+                            <ColumnConstraints percentWidth="50" />
+                        </columnConstraints>
+
+                        <children>
+                            <VBox spacing="8" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                                <Label text="Book ID / ISBN" />
+                                <TextField fx:id="txtBookId" prefHeight="42" promptText="e.g. B001" />
+                            </VBox>
+
+                            <VBox spacing="8" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                                <Label text="Book Title" />
+                                <TextField fx:id="txtBookTitle" prefHeight="42" promptText="Enter book title" />
+                            </VBox>
+
+                            <VBox spacing="8" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                                <Label text="Author" />
+                                <TextField fx:id="txtAuthor" prefHeight="42" promptText="Enter author name" />
+                            </VBox>
+
+                            <VBox spacing="8" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                <Label text="Category" />
+                                <ComboBox fx:id="cmbCategory" maxWidth="Infinity" prefHeight="42" promptText="Select category" />
+                            </VBox>
+
+                            <VBox spacing="8" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                                <Label text="Published Year" />
+                                <TextField fx:id="txtPublishedYear" prefHeight="42" promptText="e.g. 2024" />
+                            </VBox>
+
+                            <VBox spacing="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                <Label text="Quantity" />
+                                <TextField fx:id="txtQuantity" prefHeight="42" promptText="Enter quantity" />
+                            </VBox>
+                        </children>
+                  <rowConstraints>
+                     <RowConstraints />
+                     <RowConstraints />
+                     <RowConstraints />
+                  </rowConstraints>
+                    </GridPane>
+
+                    <HBox alignment="CENTER_LEFT" spacing="12" style="-fx-background-color: #edf4ff;                                  -fx-background-radius: 10;                                  -fx-padding: 17;">
+                        <Label style="-fx-text-fill: #2563eb;                                       -fx-font-size: 25;                                       -fx-font-weight: bold;" text="ℹ" />
+                        <VBox spacing="5">
+                            <Label style="-fx-text-fill: #345b99;" text="Make sure the book details are correct before saving." />
+                            <Label style="-fx-text-fill: #345b99;" text="The book will be available in the library collection." />
+                        </VBox>
+                    </HBox>
+
+                    <Separator />
+
+                    <HBox spacing="12">
+                        <Button onAction="#addBookOnAction" prefHeight="46" style="-fx-background-color: #3260f5; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 9; -fx-padding: 0 25; -fx-max-height: 35;" styleClass="add-button" stylesheets="@../css/btn.css" text="+ Add " />
+                  <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="90.0" styleClass="btn-update" stylesheets="@../css/btn.css" text="Update" />
+                  <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="90.0" styleClass="btn-delete" stylesheets="@../css/btn.css" text="Delete" />
+
+                        <Button onAction="#clearFields" prefHeight="46" style="-fx-background-color: white; -fx-text-fill: #42669d; -fx-border-color: #cbdaf0; -fx-border-radius: 9; -fx-background-radius: 9; -fx-padding: 0 25; -fx-max-height: 35;" styleClass="btn-reset" stylesheets="@../css/btn.css" text="⟳  Reset" />
+                    </HBox>
+                </VBox>
+
+                <VBox alignment="CENTER" minWidth="230" prefWidth="265" spacing="24" style="-fx-background-color: #eff5ff;                              -fx-background-radius: 12;                              -fx-padding: 20;">
+
+                    <Label style="-fx-font-size: 95;" text="📚" />
+
+                    <Label style="-fx-font-size: 20;                                   -fx-font-style: italic;                                   -fx-text-fill: #315a9d;" text="“A room without books&#10;is like a body without&#10;a soul.”" textAlignment="CENTER" wrapText="true" />
+
+                    <Region prefHeight="3" prefWidth="55" style="-fx-background-color: #3260f5;" />
+                </VBox>
+            </HBox>
+        </VBox>
+    </children>
 </AnchorPane>

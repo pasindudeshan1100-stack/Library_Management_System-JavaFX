@@ -15,7 +15,7 @@
     <HBox spacing="0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
 
         <!-- SIDEBAR -->
-        <VBox minWidth="220" prefWidth="220" spacing="15" styleClass="sidebar" stylesheets="@../css/home.css">
+        <VBox minWidth="220" prefHeight="719.0" prefWidth="258.0" spacing="15" styleClass="sidebar" stylesheets="@../css/home.css">
 
             <padding>
                 <Insets bottom="20" left="15" right="15" top="25" />
@@ -49,7 +49,7 @@
         </VBox>
 
         <!-- MAIN CONTENT -->
-        <VBox prefHeight="600.0" prefWidth="900.0" spacing="22" style="-fx-background-color: #F1F5F9;" stylesheets="@../css/Member.css" HBox.hgrow="ALWAYS">
+        <VBox prefHeight="400.0" prefWidth="600.0" spacing="22" style="-fx-background-color: #F1F5F9;" stylesheets="@../css/Member.css" HBox.hgrow="ALWAYS">
 
             <padding>
                 <Insets bottom="20" left="28" right="28" top="28" />
@@ -109,26 +109,26 @@
                 <!-- SEARCH -->
                 <HBox alignment="CENTER_LEFT" spacing="10">
 
-                    <TextField fx:id="txtSearchMember" prefHeight="40" promptText="Enter Member ID..." style="-fx-background-color: #F8FAFC; -fx-border-color: #CBD5E1; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 10;" HBox.hgrow="ALWAYS" />
+                    <TextField fx:id="txtSearchMember" prefHeight="40" prefWidth="363.0" promptText="Enter Member ID..." style="-fx-background-color: #F8FAFC; -fx-border-color: #CBD5E1; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 10;" HBox.hgrow="ALWAYS" />
 
-                    <Button onAction="#SearchbtnOnAction" style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 11 18; -fx-cursor: hand;" text="🔍 Search" />
+                    <Button onAction="#SearchbtnOnAction" prefHeight="40.0" prefWidth="94.0" style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 11 18; -fx-cursor: hand;" text="🔍 Search" />
             
-                                                                                <Button onAction="#AddMemberbtnOnAction" prefHeight="40.0" prefWidth="136.0" style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 11 18; -fx-cursor: hand;" text="➕ Add Member" />
+                                                                                <Button onAction="#AddMemberbtnOnAction" prefHeight="40.0" prefWidth="126.0" style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 11 18; -fx-cursor: hand;" text="➕ Add Member" />
                 </HBox>
 
                 <!-- TABLE -->
                 <TableView fx:id="tblMembers" prefHeight="214.0" prefWidth="672.0" VBox.vgrow="ALWAYS">
 
                     <columns>
-                        <TableColumn fx:id="colMemberId" prefWidth="95" text="Member ID" />
+                        <TableColumn fx:id="colMemberId" prefWidth="96.79999256134033" text="Member ID" />
 
-                        <TableColumn fx:id="colName" prefWidth="160" text="Full Name" />
+                        <TableColumn fx:id="colName" prefWidth="123.20004272460938" text="Full Name" />
 
-                        <TableColumn fx:id="colEmail" prefWidth="154.4000244140625" text="Email" />
+                        <TableColumn fx:id="colEmail" prefWidth="127.99995422363281" text="Email" />
 
-                        <TableColumn fx:id="colPhonenumber" prefWidth="134.39996337890625" text="Phone Number" />
+                        <TableColumn fx:id="colPhonenumber" prefWidth="140.79983520507812" text="Phone Number" />
 
-                        <TableColumn fx:id="colAdress" prefWidth="172.800048828125" text="Address" />
+                        <TableColumn fx:id="colAdress" prefWidth="236.0001220703125" text="Address" />
                     </columns>
                 </TableView>
 
@@ -140,6 +140,4 @@
 
         </VBox>
     </HBox>
-
-                                                                                     <Button layoutX="898.0" layoutY="49.0" onAction="#RefreshbtnOnAction" prefHeight="40.0" prefWidth="46.0" style="-fx-background-color: white; -fx-border-color: #CBD5E1; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 10 16; -fx-cursor: hand;" text="↻" />
 </AnchorPane>
