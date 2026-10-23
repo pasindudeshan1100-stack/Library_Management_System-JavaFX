@@ -5,13 +5,12 @@ public class Book {
     private  String title;
     private  String author;
     private String  category;
-    private  String  year;
-    private  String quantity;
+    private Integer year;
+    private  Integer quantity;
 
-    public Book() {
-    }
 
-    public Book(String bookid, String title, String author, String category, String year, String quantity) {
+
+    public Book(String bookid, String title, String author, String category, Integer year, Integer quantity) {
         this.bookid = bookid;
         this.title = title;
         this.author = author;
@@ -52,19 +51,19 @@ public class Book {
         this.category = category;
     }
 
-    public String getYear() {
+    public Integer getYear() {
         return year;
     }
 
-    public void setYear(String year) {
+    public void setYear(Integer year) {
         this.year = year;
     }
 
-    public String getQuantity() {
+    public Integer getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(String quantity) {
+    public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
 }

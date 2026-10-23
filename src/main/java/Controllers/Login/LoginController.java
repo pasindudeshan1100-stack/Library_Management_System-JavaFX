@@ -19,7 +19,8 @@ public class LoginController {
             while (resultSet.next()){
                 String dbUsaername= resultSet.getString("username");
                 String dbPassword= resultSet.getString("password");
-                if (UserName.equals(dbUsaername)&& Password.equals(dbPassword)) {
+                if (UserName.equals(dbUsaername)&& Password.equals(dbPassword
+                )) {
                     return true;
                 }
             }

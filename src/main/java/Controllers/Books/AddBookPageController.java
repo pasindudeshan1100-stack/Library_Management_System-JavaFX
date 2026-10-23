@@ -9,6 +9,7 @@ import javafx.scene.control.TextField;
 public class AddBookPageController {
 
     AddBookController addBookController= new AddBookController();
+
     @FXML
     private ComboBox<String> cmbCategory;
 
@@ -29,35 +30,58 @@ public class AddBookPageController {
 
     @FXML
     void addBookOnAction(ActionEvent event) {
-    String author= txtAuthor.getText();
-    String title=txtBookTitle.getText();
-    String category=cmbCategory.getValue();
-    String year=txtPublishedYear.getText();
-    String  quantity= txtQuantity.getText();
-    try {
+        String author= txtAuthor.getText();
+        String title=txtBookTitle.getText();
+        String category=cmbCategory.getValue();
+        String year=txtPublishedYear.getText();
+        String quantity= txtQuantity.getText();
 
-        boolean isAdded=addBookController.AddBook(
-                author.trim(),
-                title.trim(),
-                category.trim(),
-                year.trim(),
-                quantity.trim()
-        );
-        if (isAdded){
-            new Alert(Alert.AlertType.INFORMATION,"New Book added Successfully!").show();
+        if (author.isBlank()
+                || title.isBlank()
+                || category == null
+                || year.isBlank()
+                || quantity.isBlank()) {
 
-        }else {
-            new Alert(Alert.AlertType.ERROR,"Failed to add Book").show();
+            new Alert(
+                    Alert.AlertType.WARNING,
+                    "Please fill all fields!"
+            ).showAndWait();
+
+            return;
         }
+        try {
+            int publishedYear = Integer.parseInt(year.trim());
+            int bookQuantity = Integer.parseInt(quantity.trim());
 
-    } catch (Exception e) {
-        new Alert(Alert.AlertType.ERROR,"Error"+e.getMessage()).show();
+            boolean isAdded=addBookController.AddBook(
+                    author.trim(),
+                    title.trim(),
+                    category.trim(),
+                    publishedYear,
+                    bookQuantity
+            );
+            if (isAdded){
+                new Alert(Alert.AlertType.INFORMATION,"New Book added Successfully!").show();
+
+            }else {
+                new Alert(Alert.AlertType.ERROR,"Failed to add Book").show();
+            }
+
+        } catch (Exception e) {
+            e.printStackTrace();
+            new Alert(Alert.AlertType.ERROR,"Error"+e.getMessage()).show();
+        }
+        clearFields();
     }
 
-    }
 
     @FXML
-    void clearFields(ActionEvent event) {
+    void clearFields() {
+        txtAuthor.clear();
+        txtBookId.clear();
+        txtBookTitle.clear();
+        txtQuantity.clear();
+        txtPublishedYear.clear();
 
     }
     public void initialize(){
@@ -83,4 +107,6 @@ public class AddBookPageController {
         );
     }
 }
+
+
 
