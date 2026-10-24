@@ -56,25 +56,22 @@
    
         <!-- TABLE -->
 
-        <TableView fx:id="bookTable" accessibleRole="DATE_PICKER" layoutX="24.0" layoutY="214.0" prefHeight="266.0" prefWidth="860.0">
+        <TableView fx:id="bookTable" accessibleRole="DATE_PICKER" layoutX="24.0" layoutY="214.0" prefHeight="266.0" prefWidth="750.0">
 
             <columns>
 
                 <TableColumn fx:id="idColumn" prefWidth="60" text="ID" />
 
-                <TableColumn fx:id="isbnColumn" prefWidth="112.0" text="ISBN" />
-
-                <TableColumn fx:id="titleColumn" prefWidth="157.6000518798828" text="Book Title" />
+                            <TableColumn fx:id="titleColumn" prefWidth="157.6000518798828" text="Book Title" />
 
                 <TableColumn fx:id="authorColumn" prefWidth="156.0" text="Author" />
 
                 <TableColumn fx:id="categoryColumn" prefWidth="116.79998779296875" text="Category" visible="false" />
 
-                <TableColumn fx:id="yearColumn" prefWidth="144.00006103515625" text="Year" />
+                <TableColumn fx:id="categoryColumn" prefWidth="127.99996948242188" text="Category" />
 
-                <TableColumn fx:id="quantityColumn" prefWidth="116.79998779296875" text="Quantity" />
-
-                <TableColumn fx:id="actionColumn" prefWidth="111.20001220703125" text="Actions" />
+                <TableColumn fx:id="yearColumn" prefWidth="148.79998779296875" text="Published Year" />
+         <TableColumn fx:id="quantityColumn" prefWidth="112.0" text="Quantity" />
 
             </columns>
       <styleClass>

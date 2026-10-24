@@ -1,0 +1,80 @@
+
+/* Common Button Style */
+.btn {
+    -fx-pref-height: 44px;
+    -fx-padding: 0 22px;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-border-radius: 8px;
+    -fx-cursor: hand;
+    -fx-transition: 0.2s;
+}
+
+/* ADD - Blue */
+.btn-add {
+    -fx-background-color: #3260f5;
+    -fx-text-fill: white;
+    -fx-border-color: transparent;
+}
+
+.btn-add:hover {
+    -fx-background-color: #2551e6;
+}
+
+.btn-add:pressed {
+    -fx-background-color: #1d43c4;
+}
+
+/* RESET - White / Blue Outline */
+.btn-reset {
+    -fx-background-color: white;
+    -fx-text-fill: #4b6cb7;
+    -fx-border-color: #d7e2f5;
+    -fx-border-width: 1.5px;
+}
+
+.btn-reset:hover {
+    -fx-background-color: #edf4ff;
+    -fx-border-color: #3260f5;
+}
+
+.btn-reset:pressed {
+    -fx-background-color: #dce9ff;
+}
+
+/* UPDATE - Green */
+.btn-update {
+    -fx-background-color: #22c55e;
+    -fx-text-fill: white;
+    -fx-border-color: transparent;
+}
+
+.btn-update:hover {
+    -fx-background-color: #16a34a;
+}
+
+.btn-update:pressed {
+    -fx-background-color: #15803d;
+}
+
+/* DELETE - Red */
+.btn-delete {
+    -fx-background-color: #ef4444;
+    -fx-text-fill: white;
+    -fx-border-color: transparent;
+}
+
+.btn-delete:hover {
+    -fx-background-color: #dc2626;
+}
+
+.btn-delete:pressed {
+    -fx-background-color: #b91c1c;
+}
+
+/* Disabled Button */
+.btn:disabled {
+    -fx-opacity: 0.6;
+    -fx-cursor: default;
+}
