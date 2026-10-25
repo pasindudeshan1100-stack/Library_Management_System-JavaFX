@@ -7,12 +7,12 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.time.Year;
 import java.util.ArrayList;
 import java.util.List;
 
 public class AddBookController {
     Connection connection= DBConnection.getInstance().getConnection();
+    
 
     public boolean AddBook(String author, String title, String category, int year, int quantity) {
         String sql="INSERT INTO books (book_title,author,category,published_year,quantity)VALUES(?,?,?,?,?);";
@@ -57,5 +57,42 @@ public class AddBookController {
             throw new RuntimeException(e);
         }
         return books;
+    }
+
+    public boolean updateBook(String id,String author, String category, String title, int year, int quantity){
+        String sql="UPDATE books SET book_title=?,author=?,category=?,published_year=?,quantity=? WHERE book_id=?;" ;
+        try {
+          PreparedStatement preparedStatement=  connection.prepareStatement(sql);
+          preparedStatement.setString(3,title);
+          preparedStatement.setString(1,author);
+          preparedStatement.setString(2,category);
+          preparedStatement.setInt(4,year);
+          preparedStatement.setInt(5,quantity);
+          preparedStatement.setString(6,id);
+          return preparedStatement.executeUpdate()>0;
+
+
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+
+        }
+
+        return false;
+    }
+
+
+    public boolean deleteBooks(String id) {
+        String sql="DELETE FROM books WHERE book_id = ?;";
+        try {
+            PreparedStatement preparedStatement= connection.prepareStatement(sql);
+
+            preparedStatement.setString(1,id);
+            int rowsAffected= preparedStatement.executeUpdate();
+            return rowsAffected>0;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

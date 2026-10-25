@@ -85,8 +85,8 @@
 
                     <HBox spacing="12">
                         <Button onAction="#addBookOnAction" prefHeight="46" style="-fx-background-color: #3260f5; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 9; -fx-padding: 0 25; -fx-max-height: 35;" styleClass="add-button" stylesheets="@../css/btn.css" text="+ Add " />
-                  <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="90.0" styleClass="btn-update" stylesheets="@../css/btn.css" text="Update" />
-                  <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="90.0" styleClass="btn-delete" stylesheets="@../css/btn.css" text="Delete" />
+                  <Button mnemonicParsing="false" onAction="#UpdateOnAction" prefHeight="34.0" prefWidth="90.0" styleClass="btn-update" stylesheets="@../css/btn.css" text="Update" />
+                  <Button mnemonicParsing="false" onAction="#DeleteOnAction" prefHeight="34.0" prefWidth="90.0" styleClass="btn-delete" stylesheets="@../css/btn.css" text="Delete" />
 
                         <Button onAction="#clearFields" prefHeight="46" style="-fx-background-color: white; -fx-text-fill: #42669d; -fx-border-color: #cbdaf0; -fx-border-radius: 9; -fx-background-radius: 9; -fx-padding: 0 25; -fx-max-height: 35;" styleClass="btn-reset" stylesheets="@../css/btn.css" text="⟳  Reset" />
                     </HBox>
