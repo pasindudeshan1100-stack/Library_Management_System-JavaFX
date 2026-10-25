@@ -2,8 +2,6 @@ package Controllers.Books;
 
 import Model.Book;
 import db.DBConnection;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Alert.AlertType;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -12,10 +10,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import static javafx.scene.control.Alert.AlertType.ERROR;
-
 public class AddBookController {
     Connection connection= DBConnection.getInstance().getConnection();
+    
 
     public boolean AddBook(String author, String title, String category, int year, int quantity) {
         String sql="INSERT INTO books (book_title,author,category,published_year,quantity)VALUES(?,?,?,?,?);";
@@ -86,4 +83,16 @@ public class AddBookController {
     }
 
 
+    public boolean deleteBooks(String id) {
+        String sql="DELETE FROM books WHERE book_id = ?;";
+        try {
+            PreparedStatement preparedStatement= connection.prepareStatement(sql);
+
+            preparedStatement.setString(1,id);
+            int rowsAffected= preparedStatement.executeUpdate();
+            return rowsAffected>0;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
 }

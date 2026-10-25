@@ -155,7 +155,19 @@ public class AddBookPageController {
         String title=txtBookTitle.getText().trim();
         String year=txtPublishedYear.getText().trim();
         String Quantity=txtQuantity.getText().trim();
+        if (author.isBlank()
+                || title.isBlank()
+                || category == null
+                || year.isBlank()
+                || Quantity.isBlank()) {
 
+            new Alert(
+                    Alert.AlertType.WARNING,
+                    "Please fill all fields!"
+            ).showAndWait();
+
+            return;
+        }
             int published_year=Integer.parseInt(year);
             int quantity=Integer.parseInt(Quantity);
        boolean isUpdated= addBookController.updateBook(id,author,category,title,published_year,quantity);
@@ -166,11 +178,21 @@ public class AddBookPageController {
        else {
            new Alert(Alert.AlertType.ERROR,"Failed to update Book!").show();
        }
+       clearFields();
 
     }
 
     public void DeleteOnAction(ActionEvent actionEvent) {
+       String id=txtBookId.getText().trim();
 
+      boolean isDeleted= addBookController.deleteBooks(id);
+      if (isDeleted){
+          new Alert(Alert.AlertType.INFORMATION,"Delete Book Successfully!").show();
+
+      }else {
+          new Alert(Alert.AlertType.ERROR,"Failed to delete Book!").show();
+      }
+     clearFields();
     }
 }
 
