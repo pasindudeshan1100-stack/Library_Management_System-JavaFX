@@ -1,0 +1,88 @@
+```css
+/* Main Background */
+.root {
+    -fx-background-color: #f4f7fc;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* Page Title */
+.page-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #172554;
+}
+
+.subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #64748b;
+}
+
+/* Main Form Card */
+.form-card {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 20px;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 20px;
+    -fx-border-width: 1px;
+    -fx-effect: dropshadow(gaussian, rgba(15,23,42,0.07), 18, 0, 0, 5);
+}
+
+/* Input Labels */
+.field-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #334155;
+}
+
+/* Text Fields */
+.input-field {
+    -fx-background-color: #f8fafc;
+    -fx-border-color: #dbe3ef;
+    -fx-border-radius: 9px;
+    -fx-background-radius: 9px;
+    -fx-text-fill: #1e293b;
+    -fx-prompt-text-fill: #94a3b8;
+    -fx-font-size: 13px;
+    -fx-padding: 12px;
+}
+
+.input-field:focused {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #3b82f6;
+    -fx-border-width: 1.5px;
+    -fx-effect: dropshadow(gaussian, rgba(59,130,246,0.12), 8, 0, 0, 0);
+}
+
+/* Text Area */
+.text-area {
+    -fx-background-color: #f8fafc;
+    -fx-border-color: #dbe3ef;
+    -fx-border-radius: 9px;
+    -fx-background-radius: 9px;
+    -fx-text-fill: #1e293b;
+    -fx-prompt-text-fill: #94a3b8;
+}
+
+.text-area .content {
+    -fx-background-color: #f8fafc;
+    -fx-background-radius: 9px;
+}
+
+.text-area:focused {
+    -fx-border-color: #3b82f6;
+}
+
+/* Right Information Panel */
+.info-panel {
+    -fx-background-color: #eff6ff;
+    -fx-background-radius: 16px;
+    -fx-border-color: #dbeafe;
+    -fx-border-radius: 16px;
+    -fx-border-width: 1px;
+}
+
+.member-icon {
+    -fx-font-size: 65px;
+    -fx-background-color: #dbeafe;
+    -fx-background-radius: 50%;
+    -fx-padding: 18

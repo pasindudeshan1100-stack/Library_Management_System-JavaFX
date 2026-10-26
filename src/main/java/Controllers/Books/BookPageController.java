@@ -89,7 +89,24 @@ public class BookPageController {
 
     }
 
+    public void HistorybtnOnAction(ActionEvent actionEvent) {
     }
+
+    public void ReturnbtnOnAction(ActionEvent actionEvent) {
+    }
+
+    public void IssuebtnOnAction(ActionEvent actionEvent) {
+    }
+
+    public void MemberbtnOnAction(ActionEvent actionEvent) {
+    }
+
+    public void BooksbtnOnAction(ActionEvent actionEvent) {
+    }
+
+    public void DashboardbtnOnAction(ActionEvent actionEvent) {
+    }
+}
 
 
 

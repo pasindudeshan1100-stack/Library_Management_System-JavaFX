@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@../css/Member.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Members.AddMemberPageController">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@../css/Addmember.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Members.AddMemberPageController">
     <children>
         <VBox spacing="24.0" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="25.0">
 
@@ -59,12 +59,12 @@
                                 <TextField fx:id="txtFullName" promptText="Enter full name" styleClass="input-field" />
                             </VBox>
 
-                            <VBox spacing="7.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <VBox spacing="7.0" GridPane.rowIndex="2">
                                 <Label styleClass="field-label" text="Address" />
                                 <TextArea fx:id="txtAddress" prefHeight="100.0" prefRowCount="3" promptText="Enter full address" styleClass="input-field" wrapText="true" />
                             </VBox>
 
-                            <VBox spacing="7.0" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                            <VBox spacing="7.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
                                 <Label styleClass="field-label" text="Email Address" />
                                 <TextField fx:id="txtEmail" promptText="Enter email address" styleClass="input-field" />
                             </VBox>
@@ -73,11 +73,12 @@
                      <RowConstraints />
                      <RowConstraints />
                      <RowConstraints />
+                     <RowConstraints />
                   </rowConstraints>
                     </GridPane>
 
                     <!-- Information Box -->
-                    <HBox alignment="CENTER_LEFT" spacing="12" style="-fx-background-color: #edf4ff;              -fx-background-radius: 10;              -fx-padding: 17;">
+                    <HBox alignment="CENTER_LEFT" prefHeight="103.0" prefWidth="542.0" spacing="12" style="-fx-background-color: #edf4ff;              -fx-background-radius: 10;              -fx-padding: 17;">
 
                         <Label style="-fx-text-fill: #2563eb;                   -fx-font-size: 25;                   -fx-font-weight: bold;" text="ℹ" />
 
@@ -116,7 +117,7 @@
                         <String fx:value="btn" />
                      </styleClass></Button>
 
-                        <Button onAction="#ResetbtnOnAction" prefHeight="40.0" prefWidth="100.0" stylesheets="@../css/btn.css" text="↻  Reset">
+                        <Button onAction="#ResetbtnOnAction" prefHeight="36.0" prefWidth="100.0" stylesheets="@../css/btn.css" text="↻  Reset">
                      <styleClass>
                         <String fx:value="btn-reset" />
                         <String fx:value="btn" />

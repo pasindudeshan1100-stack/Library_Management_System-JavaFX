@@ -8,136 +8,128 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="719.0" prefWidth="957.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Members.MemberPageController">
+<AnchorPane prefHeight="719.0" prefWidth="1100.0" stylesheets="@../css/Member.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Members.MemberPageController">
 
     <HBox spacing="0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
 
         <!-- SIDEBAR -->
-        <VBox minWidth="220" prefHeight="719.0" prefWidth="258.0" spacing="15" styleClass="sidebar" stylesheets="@../css/home.css">
-
+        <VBox layoutX="0.0" layoutY="155.0" prefHeight="496.0" prefWidth="220.0" spacing="15.0" styleClass="sidebar" stylesheets="@../css/home.css">
             <padding>
-                <Insets bottom="20" left="15" right="15" top="25" />
+                <Insets bottom="20" left="15" right="15" top="28" />
             </padding>
 
-            <Label style="-fx-font-size: 25px; -fx-font-weight: bold; -fx-text-fill: white;" text="📚 Library" />
+            <!-- BRAND -->
+            <Label styleClass="brand-title" text="📚  Library" />
 
-            <Label style="-fx-font-size: 10px; -fx-text-fill: #93C5FD;" text="MANAGEMENT SYSTEM" />
+            <Label styleClass="brand-subtitle" text="       MANAGEMENT SYSTEM" />
 
-            <Label style="-fx-font-size: 11px; -fx-text-fill: #93C5FD;" text="MENU">
-                <VBox.margin>
-                    <Insets top="15" />
-                </VBox.margin>
-            </Label>
 
-            <Button maxWidth="Infinity" onAction="#DashboardbtnOnAction" styleClass="menu-button" text="🏠 Dashboard" />
+                <Label styleClass="menu-title" text="MENU">
+                    <VBox.margin>
+                        <Insets top="15.0" />
+                    </VBox.margin></Label>
 
-            <Button maxWidth="Infinity" onAction="#BooksbtnOnAction" styleClass="menu-button" text="📖 Books" />
+                <Button onAction="#DashboardbtnOnAction" styleClass="menu-button" text="🏠 Dashboard" />
 
-            <Button maxWidth="Infinity" onAction="#MemberbtnOnAction" styleClass="menu-button" text="👥 Members" />
+                <Button onAction="#BooksbtnOnAction" styleClass="menu-button" text="📖  Books" />
 
-            <Button maxWidth="Infinity" onAction="#IssuebtnOnAction" styleClass="menu-button" text="📤 Issue Book" />
+                <Button onAction="#MemberbtnOnAction" styleClass="menu-button" text="👥  Members" />
 
-            <Button maxWidth="Infinity" onAction="#ReturnbtnOnAction" styleClass="menu-button" text="📥 Return Book" />
+                <Button onAction="#IssuebtnOnAction" styleClass="menu-button" text="📤  Issue Book" />
 
-            <Button maxWidth="Infinity" onAction="#HistorybtnOnAction" styleClass="menu-button" text="📋 Borrowing History" />
+                <Button onAction="#ReturnbtnOnAction" styleClass="menu-button" text="📥  Return Book" />
 
-            <VBox stylesheets="@../css/home.css" VBox.vgrow="ALWAYS" />
+                <Button onAction="#HistorybtnOnAction" styleClass="menu-button" text="📋  Borrowing History" />
 
-            <Button fx:id="logoutButton" maxWidth="Infinity" styleClass="logout-button" text="Logout" />
-        </VBox>
+                <Button fx:id="logoutButton" styleClass="logout-button" stylesheets="@../css/home.css" text="Logout">
+                    <VBox.margin>
+                        <Insets top="150.0" />
+                    </VBox.margin>
+                </Button>
 
-        <!-- MAIN CONTENT -->
-        <VBox prefHeight="400.0" prefWidth="600.0" spacing="22" style="-fx-background-color: #F1F5F9;" stylesheets="@../css/Member.css" HBox.hgrow="ALWAYS">
-
-            <padding>
-                <Insets bottom="20" left="28" right="28" top="28" />
-            </padding>
-
-            <!-- HEADER -->
-            <HBox alignment="CENTER_LEFT" prefHeight="63.0" prefWidth="584.0" spacing="12">
-   
-                <VBox prefHeight="63.0" prefWidth="602.0" spacing="5" HBox.hgrow="ALWAYS">
-                    <Label style="-fx-font-size: 27px; -fx-font-weight: bold; -fx-text-fill: #172554;" text="Members" />
-   
-                    <Label style="-fx-font-size: 13px; -fx-text-fill: #64748B;" text="Manage and view all registered library members" />
-                </VBox>
-            </HBox>
-
-            <!-- SUMMARY CARDS -->
-            <HBox spacing="16">
-
-                <VBox spacing="9" style="-fx-background-color: white; -fx-background-radius: 12; -fx-border-color: #E2E8F0; -fx-border-radius: 12;" HBox.hgrow="ALWAYS">
-                    <padding>
-                        <Insets bottom="18" left="20" right="20" top="18" />
-                    </padding>
-
-                    <Label style="-fx-text-fill: #64748B; -fx-font-size: 12px; -fx-font-weight: bold;" text="👥 MEMBERS" />
-
-                    <Label fx:id="lblTotalMembers" style="-fx-text-fill: #172554; -fx-font-size: 28px; -fx-font-weight: bold;" text="0" />
-
-                    <Label style="-fx-text-fill: #94A3B8; -fx-font-size: 12px;" text="Registered members" />
-                </VBox>
-
-                <VBox spacing="9" style="-fx-background-color: white; -fx-background-radius: 12; -fx-border-color: #E2E8F0; -fx-border-radius: 12;" HBox.hgrow="ALWAYS">
-                    <padding>
-                        <Insets bottom="18" left="20" right="20" top="18" />
-                    </padding>
-
-                    <Label style="-fx-text-fill: #64748B; -fx-font-size: 12px; -fx-font-weight: bold;" text="🗄 DATABASE" />
-
-                    <Label style="-fx-text-fill: #16A34A; -fx-font-size: 23px; -fx-font-weight: bold;" text="Connected" />
-
-                    <Label style="-fx-text-fill: #94A3B8; -fx-font-size: 12px;" text="Member records" />
-                </VBox>
-            </HBox>
-
-            <!-- MEMBERS TABLE -->
-            <VBox prefHeight="394.0" prefWidth="711.0" spacing="16" style="-fx-background-color: white; -fx-background-radius: 12; -fx-border-color: #E2E8F0; -fx-border-radius: 12;" VBox.vgrow="ALWAYS">
-
-                <padding>
-                    <Insets bottom="20" left="20" right="20" top="20" />
-                </padding>
-
-                <VBox prefHeight="50.0" prefWidth="537.0" spacing="5">
-                    <Label style="-fx-font-size: 19px; -fx-font-weight: bold; -fx-text-fill: #172554;" text="All Members" />
-
-                    <Label style="-fx-font-size: 12px; -fx-text-fill: #64748B;" text="Member information stored in the database" />
-                </VBox>
-
-                <!-- SEARCH -->
-                <HBox alignment="CENTER_LEFT" spacing="10">
-
-                    <TextField fx:id="txtSearchMember" prefHeight="40" prefWidth="363.0" promptText="Enter Member ID..." style="-fx-background-color: #F8FAFC; -fx-border-color: #CBD5E1; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 10;" HBox.hgrow="ALWAYS" />
-
-                    <Button onAction="#SearchbtnOnAction" prefHeight="40.0" prefWidth="94.0" style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 11 18; -fx-cursor: hand;" text="🔍 Search" />
-            
-                                                                                <Button onAction="#AddMemberbtnOnAction" prefHeight="40.0" prefWidth="126.0" style="-fx-background-color: #2563EB; -fx-text-fill: white; -fx-font-weight: bold; -fx-background-radius: 8; -fx-padding: 11 18; -fx-cursor: hand;" text="➕ Add Member" />
-                </HBox>
-
-                <!-- TABLE -->
-                <TableView fx:id="tblMembers" prefHeight="214.0" prefWidth="672.0" VBox.vgrow="ALWAYS">
-
-                    <columns>
-                        <TableColumn fx:id="colMemberId" prefWidth="96.79999256134033" text="Member ID" />
-
-                        <TableColumn fx:id="colName" prefWidth="123.20004272460938" text="Full Name" />
-
-                        <TableColumn fx:id="colEmail" prefWidth="127.99995422363281" text="Email" />
-
-                        <TableColumn fx:id="colPhonenumber" prefWidth="140.79983520507812" text="Phone Number" />
-
-                        <TableColumn fx:id="colAdress" prefWidth="236.0001220703125" text="Address" />
-                    </columns>
-                </TableView>
-
-                <!-- ACTION BUTTONS -->
-                <HBox alignment="CENTER_RIGHT" spacing="12" />
             </VBox>
 
-            <Label style="-fx-text-fill: #94A3B8; -fx-font-size: 11px;" text="Library Management System  •  Members" />
+
+
+        <!-- MAIN CONTENT -->
+        <VBox spacing="22" styleClass="main-content" HBox.hgrow="ALWAYS">
+
+            <padding>
+                <Insets bottom="20" left="28" right="28" top="30" />
+            </padding>
+
+            <!-- PAGE HEADER -->
+            <VBox spacing="7">
+
+                <Label styleClass="page-title" text="Members" />
+
+                <Label styleClass="page-subtitle" text="Manage and view all registered library members" />
+
+            </VBox>
+
+            <!-- TOP TOOLBAR -->
+            <HBox alignment="CENTER_LEFT" spacing="15" styleClass="toolbar">
+
+                <!-- SEARCH -->
+                <HBox alignment="CENTER_LEFT" spacing="10" styleClass="search-box" HBox.hgrow="ALWAYS">
+
+                    <Label styleClass="search-icon" text="⌕" />
+
+                    <TextField fx:id="txtSearch" onAction="#SearchbtnOnAction" promptText="Search members..." styleClass="search-field" HBox.hgrow="ALWAYS" />
+
+                </HBox>
+
+                <!-- ADD MEMBER -->
+                <Button fx:id="btnAddMember" onAction="#AddMemberbtnOnAction" prefHeight="42.0" prefWidth="106.0" styleClass="btn-add" stylesheets="@../css/btn.css" text="+   Add Member" />
+
+            </HBox>
+
+            <!-- TABLE CARD -->
+            <VBox spacing="0" styleClass="table-card" VBox.vgrow="ALWAYS">
+
+                <TableView fx:id="tblMembers" styleClass="members-table" VBox.vgrow="ALWAYS">
+
+                    <columns>
+
+                        <TableColumn fx:id="colMemberId" prefWidth="140.0" text="Member ID" />
+
+                        <TableColumn fx:id="colName" prefWidth="160.0" text="Full Name" />
+
+                        <TableColumn fx:id="colEmail" prefWidth="160.0" text="Email" />
+
+                        <TableColumn fx:id="colPhonenumber" prefWidth="160.0" text="Phone Number" />
+
+                        <TableColumn fx:id="colAdress" prefWidth="179.2000732421875" text="Address" />
+
+                    </columns>
+
+                </TableView>
+
+                <!-- TABLE FOOTER -->
+                <HBox alignment="CENTER_LEFT" styleClass="table-footer">
+
+                    <Label styleClass="footer-label" text="LIBRARY MEMBERS" />
+
+                    <Region HBox.hgrow="ALWAYS" />
+
+                    <Label styleClass="footer-label" text="Member Management" />
+
+                </HBox>
+
+            </VBox>
+
+            <!-- BOTTOM FOOTER -->
+            <HBox alignment="CENTER_RIGHT">
+
+                <Label styleClass="bottom-footer" text="Library Management System   •   Members" />
+
+            </HBox>
 
         </VBox>
+
     </HBox>
+
 </AnchorPane>
