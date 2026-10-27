@@ -1,0 +1,210 @@
+
+/* ==========================================
+   SMART LIBRARY - BORROWING MODULE
+   Premium JavaFX UI
+   ========================================== */
+
+.root {
+    -fx-background-color: #f4f7fb;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* Main Content */
+.main-content {
+    -fx-background-color: #f4f7fb;
+}
+
+/* Top Header */
+.top-header {
+    -fx-background-color: white;
+    -fx-padding: 22px 30px;
+    -fx-border-color: transparent transparent #e2e8f0 transparent;
+    -fx-border-width: 0 0 1px 0;
+}
+
+.page-title {
+    -fx-font-size: 25px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0b192c;
+}
+
+.page-subtitle {
+    -fx-font-size: 13px;
+    -fx-text-fill: #64748b;
+}
+
+/* Form Card */
+.form-card {
+    -fx-background-color: white;
+    -fx-background-radius: 16px;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 16px;
+    -fx-border-width: 1px;
+    -fx-padding: 28px;
+    -fx-effect: dropshadow(three-pass-box,
+        rgba(15,23,42,0.05), 14, 0, 0, 4);
+}
+
+.section-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0b192c;
+}
+
+.section-subtitle {
+    -fx-font-size: 12px;
+    -fx-text-fill: #64748b;
+}
+
+.form-label {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #334155;
+}
+
+.form-field {
+    -fx-background-color: #f8fafc;
+    -fx-background-radius: 9px;
+    -fx-border-color: #dbe3ed;
+    -fx-border-radius: 9px;
+    -fx-border-width: 1px;
+    -fx-padding: 11px 13px;
+    -fx-font-size: 13px;
+    -fx-text-fill: #1e293b;
+    -fx-prompt-text-fill: #94a3b8;
+}
+
+.form-field:hover {
+    -fx-border-color: #93b4f8;
+}
+
+.form-field:focused {
+    -fx-background-color: white;
+    -fx-border-color: #3b82f6;
+    -fx-border-width: 1.5px;
+}
+
+/* Primary Button */
+.primary-button {
+    -fx-background-color: #0b192c;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 9px;
+    -fx-padding: 12px 24px;
+    -fx-cursor: hand;
+}
+
+.primary-button:hover {
+    -fx-background-color: #1e3e62;
+}
+
+.primary-button:pressed {
+    -fx-background-color: #08111e;
+}
+
+/* Secondary Button */
+.secondary-button {
+    -fx-background-color: #eef2f7;
+    -fx-text-fill: #334155;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 9px;
+    -fx-padding: 12px 22px;
+    -fx-cursor: hand;
+}
+
+.secondary-button:hover {
+    -fx-background-color: #dbe4ef;
+}
+
+/* Return Button */
+.return-button {
+    -fx-background-color: #059669;
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 9px;
+    -fx-padding: 12px 24px;
+    -fx-cursor: hand;
+}
+
+.return-button:hover {
+    -fx-background-color: #047857;
+}
+
+/* Search */
+.search-field {
+    -fx-background-color: white;
+    -fx-background-radius: 9px;
+    -fx-border-color: #dbe3ed;
+    -fx-border-radius: 9px;
+    -fx-padding: 10px 13px;
+    -fx-font-size: 13px;
+}
+
+.search-field:focused {
+    -fx-border-color: #3b82f6;
+}
+
+/* History Table */
+.history-table {
+    -fx-background-color: white;
+    -fx-border-color: #e2e8f0;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
+}
+
+.history-table .column-header-background {
+    -fx-background-color: #edf2f8;
+}
+
+.history-table .column-header {
+    -fx-background-color: transparent;
+    -fx-padding: 13px 8px;
+}
+
+.history-table .column-header .label {
+    -fx-text-fill: #334155;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.history-table .table-row-cell {
+    -fx-background-color: white;
+    -fx-border-color: #f1f5f9;
+    -fx-border-width: 0 0 1px 0;
+    -fx-cell-size: 42px;
+}
+
+.history-table .table-row-cell:odd {
+    -fx-background-color: #fafbfd;
+}
+
+.history-table .table-row-cell:hover {
+    -fx-background-color: #eff6ff;
+}
+
+.history-table .table-row-cell:selected {
+    -fx-background-color: #dbeafe;
+}
+
+.history-table .table-cell {
+    -fx-text-fill: #334155;
+    -fx-font-size: 12px;
+    -fx-padding: 9px;
+}
+
+/* Footer */
+.page-footer {
+    -fx-background-color: white;
+    -fx-padding: 14px 24px;
+    -fx-border-color: #e2e8f0 transparent transparent transparent;
+}
+
+.footer-label {
+    -fx-text-fill: #64748b;
+    -fx-font-size: 11px;
+}
+
+/* Sidebar: existing home.css handles sidebar styling */

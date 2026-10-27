@@ -6,25 +6,23 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="719.0" prefWidth="1100.0" stylesheets="@../css/Member.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Members.MemberPageController">
+<AnchorPane prefHeight="700.0" prefWidth="1100.0" stylesheets="@../css/Member.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Members.MemberPageController">
 
-    <HBox spacing="0" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+    <HBox prefHeight="700.0" prefWidth="1100.0" spacing="0" AnchorPane.bottomAnchor="-4.0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
 
         <!-- SIDEBAR -->
-        <VBox layoutX="0.0" layoutY="155.0" prefHeight="496.0" prefWidth="220.0" spacing="15.0" styleClass="sidebar" stylesheets="@../css/home.css">
+        <VBox layoutX="0.0" layoutY="155.0" prefHeight="597.0" prefWidth="238.0" spacing="15.0" styleClass="sidebar" stylesheets="@../css/home.css">
             <padding>
                 <Insets bottom="20" left="15" right="15" top="28" />
             </padding>
-
-            <!-- BRAND -->
-            <Label styleClass="brand-title" text="📚  Library" />
-
-            <Label styleClass="brand-subtitle" text="       MANAGEMENT SYSTEM" />
+            <Label prefHeight="93.0" prefWidth="210.0" styleClass="header-title" stylesheets="@../css/Style.css" text="📚 SMART LIBRARY" textFill="#faebeb" />
 
 
                 <Label styleClass="menu-title" text="MENU">
@@ -46,7 +44,7 @@
 
                 <Button fx:id="logoutButton" styleClass="logout-button" stylesheets="@../css/home.css" text="Logout">
                     <VBox.margin>
-                        <Insets top="150.0" />
+                        <Insets top="100.0" />
                     </VBox.margin>
                 </Button>
 
@@ -55,7 +53,7 @@
 
 
         <!-- MAIN CONTENT -->
-        <VBox spacing="22" styleClass="main-content" HBox.hgrow="ALWAYS">
+        <VBox prefHeight="737.0" prefWidth="862.0" spacing="22" styleClass="main-content" HBox.hgrow="ALWAYS">
 
             <padding>
                 <Insets bottom="20" left="28" right="28" top="30" />
@@ -74,7 +72,7 @@
             <HBox alignment="CENTER_LEFT" spacing="15" styleClass="toolbar">
 
                 <!-- SEARCH -->
-                <HBox alignment="CENTER_LEFT" spacing="10" styleClass="search-box" HBox.hgrow="ALWAYS">
+                <HBox alignment="CENTER_LEFT" prefHeight="42.0" prefWidth="622.0" spacing="10" styleClass="search-box" HBox.hgrow="ALWAYS">
 
                     <Label styleClass="search-icon" text="⌕" />
 
@@ -83,7 +81,7 @@
                 </HBox>
 
                 <!-- ADD MEMBER -->
-                <Button fx:id="btnAddMember" onAction="#AddMemberbtnOnAction" prefHeight="42.0" prefWidth="106.0" styleClass="btn-add" stylesheets="@../css/btn.css" text="+   Add Member" />
+                <Button fx:id="btnAddMember" onAction="#AddMemberbtnOnAction" prefHeight="42.0" prefWidth="106.0" styleClass="btn-add" stylesheets="@../css/btn.css" text="New" />
 
             </HBox>
 
@@ -102,7 +100,7 @@
 
                         <TableColumn fx:id="colPhonenumber" prefWidth="160.0" text="Phone Number" />
 
-                        <TableColumn fx:id="colAdress" prefWidth="179.2000732421875" text="Address" />
+                        <TableColumn fx:id="colAdress" prefWidth="203.20001220703125" text="Address" />
 
                     </columns>
 

@@ -13,7 +13,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@../css/Book.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Books.AddBookPageController">
+<AnchorPane prefHeight="600.0" prefWidth="900.0" stylesheets="@../css/addBook.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Books.AddBookPageController">
     <children>
         <VBox spacing="24" AnchorPane.leftAnchor="32" AnchorPane.rightAnchor="32" AnchorPane.topAnchor="30">
 

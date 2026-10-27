@@ -1,105 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.String?>
-<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.DialogPane?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="672.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Books.BookPageController">
+<AnchorPane prefHeight="700.0" prefWidth="1300.0" stylesheets="@../css/book.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.Books.BookPageController">
 
+    <!-- SIDEBAR -->
+    <VBox prefWidth="263.0" spacing="15.0" styleClass="sidebar" stylesheets="@../css/home.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
 
-    <VBox layoutX="14.0" prefHeight="720.0" prefWidth="220.0" spacing="15.0" styleClass="sidebar" stylesheets="@../css/home.css">
         <padding>
-            <Insets bottom="20" left="15" right="15" top="28" />
+            <Insets bottom="10" left="7" right="12" top="35" />
         </padding>
 
-        <!-- BRAND -->
-        <Label styleClass="brand-title" text="📚  Library" />
-
-        <Label styleClass="brand-subtitle" text="       MANAGEMENT SYSTEM" />
-
+        <Label prefHeight="93.0" prefWidth="210.0" styleClass="header-title" stylesheets="@../css/Style.css" text="📚 SMART LIBRARY" textFill="#faebeb" />
 
         <Label styleClass="menu-title" text="MENU">
             <VBox.margin>
-                <Insets top="15.0" />
-            </VBox.margin></Label>
-
-        <Button onAction="#DashboardbtnOnAction" styleClass="menu-button" text="🏠 Dashboard" />
-
-        <Button onAction="#BooksbtnOnAction" styleClass="menu-button" text="📖  Books" />
-
-        <Button onAction="#MemberbtnOnAction" styleClass="menu-button" text="👥  Members" />
-
-        <Button onAction="#IssuebtnOnAction" styleClass="menu-button" text="📤  Issue Book" />
-
-        <Button onAction="#ReturnbtnOnAction" styleClass="menu-button" text="📥  Return Book" />
-
-        <Button onAction="#HistorybtnOnAction" styleClass="menu-button" text="📋  Borrowing History" />
-
-        <Button fx:id="logoutButton" styleClass="logout-button" stylesheets="@../css/home.css" text="Logout">
-            <VBox.margin>
-                <Insets top="150.0" />
+                <Insets top="15" />
             </VBox.margin>
-        </Button>
+        </Label>
 
+        <Button onAction="#DashboardbtnOnAction" styleClass="menu-button" text="⌂  Dashboard" />
+
+        <Button onAction="#BooksbtnOnAction" styleClass="menu-button" text="▣  Books" />
+
+        <Button onAction="#MemberbtnOnAction" styleClass="menu-button" text="♟  Members" />
+
+        <Button onAction="#IssuebtnOnAction" styleClass="menu-button" text="⇧  Issue Book" />
+
+        <Button onAction="#ReturnbtnOnAction" styleClass="menu-button" text="⇩  Return Book" />
+
+        <Button onAction="#HistorybtnOnAction" styleClass="menu-button" text="▤  Borrowing History" />
+
+        <Region VBox.vgrow="ALWAYS" />
+
+        <Button fx:id="logoutButton" styleClass="logout-button" text="Logout" />
     </VBox>
+
     <!-- MAIN CONTENT -->
+    <VBox spacing="0" styleClass="main-content" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="263.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 
-    <VBox layoutX="54.0" layoutY="121.0" prefHeight="102.0" prefWidth="730.0" spacing="20">
+        <padding>
+            <Insets bottom="15" left="35" right="13" top="35" />
+        </padding>
 
+        <!-- HEADER -->
+        <VBox spacing="8">
+            <Label styleClass="page-title" text="Books" />
+            <Label styleClass="page-subtitle" text="Manage and view all books in the library" />
+        </VBox>
 
-        <!-- SEARCH -->
+        <!-- SEARCH BAR -->
+        <HBox alignment="CENTER_LEFT" prefHeight="87.0" prefWidth="1029.0" spacing="18" styleClass="search-container">
 
-        <HBox spacing="10" />
+            <TextField fx:id="searchField" prefHeight="26.0" prefWidth="830.0" promptText="⌕   Search books..." styleClass="search-field" HBox.hgrow="ALWAYS" />
 
+            <Button onAction="#AddBooksbtnOnAction" prefHeight="41.0" prefWidth="88.0" styleClass="login-button" stylesheets="@../css/Style.css" text="New" />
+            <VBox.margin>
+                <Insets bottom="28" top="28" />
+            </VBox.margin>
+        </HBox>
+
+        <!-- BOOK TABLE -->
+        <VBox spacing="15" styleClass="table-container" VBox.vgrow="ALWAYS">
+
+            <TableView fx:id="bookTable" prefHeight="569.0" prefWidth="978.0" styleClass="book-table" VBox.vgrow="ALWAYS">
+
+                <columns>
+                    <TableColumn fx:id="idColumn" prefWidth="120.0" text="Book ID" />
+
+                    <TableColumn fx:id="titleColumn" prefWidth="210.0" text="Book Title" />
+
+                    <TableColumn fx:id="authorColumn" prefWidth="215.0" text="Author" />
+
+                    <TableColumn fx:id="categoryColumn" prefWidth="190.0" text="Category" />
+
+                    <TableColumn fx:id="yearColumn" prefWidth="140.0" text="Published Year" />
+
+                    <TableColumn fx:id="quantityColumn" prefWidth="150.0" text="Quantity" />
+                </columns>
+            </TableView>
+
+            <HBox alignment="CENTER_LEFT">
+                <Label styleClass="table-footer-label" text="LIBRARY BOOKS" />
+
+                <Region HBox.hgrow="ALWAYS" />
+
+                <Label styleClass="table-footer-label" text="Book Management" />
+            </HBox>
+        </VBox>
+
+        <!-- FOOTER -->
+        <HBox alignment="CENTER_LEFT" styleClass="table-footer">
+
+            <Region HBox.hgrow="ALWAYS" />
+
+        </HBox>
+        <HBox alignment="CENTER_RIGHT">
+
+            <Label styleClass="bottom-footer" text="Library Management System   •   Members" />
+
+        </HBox>
     </VBox>
-   <DialogPane layoutX="274.0" layoutY="334.0" />
-
-                        <Button layoutX="607.0" layoutY="216.0" onAction="#AddBooksbtnOnAction" prefHeight="36.0" prefWidth="87.0" styleClass="btn-add" stylesheets="@../css/btn.css" text=" Add Book" />
-
-       <Label layoutX="403.0" layoutY="63.0" text="Manage library books" textFill="#fcfafa" />
-
-   
-        <!-- TABLE -->
-
-        <TableView fx:id="bookTable" accessibleRole="DATE_PICKER" layoutX="234.0" layoutY="299.0" prefHeight="266.0" prefWidth="800.0">
-
-            <columns>
-
-                <TableColumn fx:id="idColumn" prefWidth="60" text="ID" />
-
-                <TableColumn fx:id="authorColumn" prefWidth="156.0" text="Author" />
-
-                <TableColumn fx:id="categoryColumn" prefWidth="116.79998779296875" text="Category" visible="false" />
-
-                <TableColumn fx:id="categoryColumn" prefWidth="127.99996948242188" text="Category" />
-
-                <TableColumn fx:id="yearColumn" prefWidth="148.79998779296875" text="Published Year" />
-         <TableColumn fx:id="quantityColumn" prefWidth="112.0" text="Quantity" />
-
-                            <TableColumn fx:id="titleColumn" prefWidth="157.6000518798828" text="Book Title" />
-
-            </columns>
-      <styleClass>
-         <String fx:value="book-table" />
-         <String fx:value="table-row-cell" />
-         <String fx:value="book-table" />
-      </styleClass>
-
-        </TableView>
-
-         <TextField fx:id="searchField" layoutX="246.0" layoutY="212.0" prefHeight="38.0" prefWidth="331.0" promptText="Search by book title, author or ISBN..." styleClass="header">
-      <stylesheets>
-         <URL value="@../css/Book.css" />
-         <URL value="@../css/IssueBook.css" />
-      </stylesheets>
-   </TextField>
 </AnchorPane>

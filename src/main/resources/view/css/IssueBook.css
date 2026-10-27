@@ -1,127 +1,188 @@
-/* =========================
-   MAIN BACKGROUND
-   ========================= */
+```css
+/* ==========================================
+   THE SMART LIBRARY - ISSUE BOOK PAGE
+   PREMIUM MODERN STYLING
+   ========================================== */
 
-.anchor-pane {
-    -fx-background-color: #f4f7fb;
+/* Main Page */
+.root {
+    -fx-background-color: #f8fafc;
+    -fx-font-family: "Segoe UI", sans-serif;
 }
 
+/* ==========================================
+   PAGE HEADER
+   ========================================== */
 
-/* =========================
-   TITLE
-   ========================= */
-
-.label {
-    -fx-text-fill: #222222;
-}
-
-
-/* First Label - ISSUE BOOK */
-.label:first-child {
-    -fx-text-fill: #1f2937;
-}
-
-
-/* =========================
-   COMBO BOX
-   ========================= */
-
-.combo-box {
-    -fx-background-color: white;
-    -fx-border-color: #cfd6df;
-    -fx-border-width: 1.5px;
-    -fx-border-radius: 7px;
-    -fx-background-radius: 7px;
-
-    -fx-font-size: 14px;
-    -fx-padding: 5px;
-}
-
-.combo-box:hover {
-    -fx-border-color: #2563eb;
-}
-
-.combo-box:focused {
-    -fx-border-color: #2563eb;
-    -fx-border-width: 2px;
-}
-
-
-/* =========================
-   TEXT FIELD
-   ========================= */
-
-.text-field {
-    -fx-background-color: white;
-    -fx-border-color: #cfd6df;
-    -fx-border-width: 1.5px;
-    -fx-border-radius: 7px;
-    -fx-background-radius: 7px;
-
-    -fx-font-size: 14px;
-    -fx-padding: 8px;
-}
-
-.text-field:hover {
-    -fx-border-color: #2563eb;
-}
-
-.text-field:focused {
-    -fx-border-color: #2563eb;
-    -fx-border-width: 2px;
-}
-
-
-/* =========================
-   FORM LABELS
-   ========================= */
-
-.label {
-    -fx-font-size: 15px;
+.issue-header {
+    -fx-background-color: #0b192c;
+    -fx-background-radius: 0 0 14px 14px;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 30px;
     -fx-font-weight: bold;
-    -fx-text-fill: #374151;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-effect: dropshadow(
+        three-pass-box,
+        rgba(15, 23, 42, 0.12),
+        10, 0, 0, 3
+    );
 }
 
+/* ==========================================
+   FORM AREA
+   ========================================== */
 
-/* =========================
+.form-label {
+    -fx-text-fill: #334155;
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* Text Fields */
+.form-field {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-color: #e2e8f0;
+    -fx-border-width: 1px;
+
+    -fx-text-fill: #334155;
+    -fx-prompt-text-fill: #94a3b8;
+    -fx-font-size: 13px;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-padding: 10px 14px;
+
+    -fx-effect: dropshadow(
+        three-pass-box,
+        rgba(15, 23, 42, 0.03),
+        5, 0, 0, 2
+    );
+}
+
+.form-field:hover {
+    -fx-border-color: #94a3b8;
+}
+
+.form-field:focused {
+    -fx-border-color: #3b82f6;
+    -fx-border-width: 1.5px;
+    -fx-background-color: #ffffff;
+
+    -fx-effect: dropshadow(
+        three-pass-box,
+        rgba(59, 130, 246, 0.10),
+        8, 0, 0, 2
+    );
+}
+
+/* ==========================================
    ISSUE BOOK BUTTON
-   ========================= */
+   ========================================== */
 
-.button {
-    -fx-background-color: #2563eb;
-    -fx-text-fill: white;
+.add-button {
+    -fx-background-color: #0b192c;
+    -fx-text-fill: #ffffff;
 
-    -fx-background-radius: 8px;
-    -fx-border-radius: 8px;
-
-    -fx-font-size: 15px;
+    -fx-font-size: 13px;
     -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI", sans-serif;
+
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-padding: 12px 25px;
 
     -fx-cursor: hand;
+
+    -fx-effect: dropshadow(
+        three-pass-box,
+        rgba(15, 23, 42, 0.12),
+        8, 0, 0, 3
+    );
 }
 
-.button:hover {
-    -fx-background-color: #1d4ed8;
+.add-button:hover {
+    -fx-background-color: #1e3e62;
 }
 
-.button:pressed {
-    -fx-background-color: #1e40af;
+.add-button:pressed {
+    -fx-background-color: #08111e;
 }
-/* Search Bar */
-.search-bar {
+
+/* ==========================================
+   SEARCH BAR
+   ========================================== */
+
+.search-container {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-border-color: #e2e8f0;
+    -fx-border-width: 1px;
+    -fx-padding: 10px 12px;
+
+    -fx-effect: dropshadow(
+        three-pass-box,
+        rgba(15, 23, 42, 0.04),
+        8, 0, 0, 3
+    );
+}
+
+.search-field {
     -fx-background-color: transparent;
-    -fx-border-color: #333333;
-    -fx-border-width: 1.5px;
-    -fx-border-radius: 8px;
+    -fx-text-fill: #334155;
+    -fx-font-size: 13px;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-prompt-text-fill: #94a3b8;
+    -fx-border-color: transparent;
     -fx-background-radius: 8px;
-
-    -fx-padding: 8px 12px;
-    -fx-font-size: 14px;
-    -fx-text-fill: #222222;
-    -fx-prompt-text-fill: #777777;
+    -fx-padding: 8px 10px;
 }
 
-.search-bar:focused {
-    -fx-border-color: #111111;
-    -fx-border-width: 2px;
+.search-field:focused {
+    -fx-background-color: #f8fafc;
+    -fx-border-color: transparent;
 }
+
+/* ==========================================
+   PAGE TITLES
+   ========================================== */
+
+.page-title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #0b192c;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.page-subtitle {
+    -fx-font-size: 13px;
+    -fx-text-fill: #64748b;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
+
+.table-footer {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 0 0 14px 14px;
+    -fx-border-color: #e2e8f0;
+    -fx-border-width: 1px 0 0 0;
+    -fx-padding: 14px 20px;
+}
+
+.footer-label {
+    -fx-text-fill: #64748b;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+.bottom-footer {
+    -fx-text-fill: #94a3b8;
+    -fx-font-size: 11px;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+```
