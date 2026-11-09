@@ -1,19 +1,15 @@
 package Controllers.Members;
 
-import Model.Member;
-import javafx.beans.property.Property;
+import Model.MemberDTO;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
+import Scene.SceneManager;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
 
-import java.io.IOException;
 import java.util.List;
 
 public class MemberPageController {
@@ -24,64 +20,63 @@ public class MemberPageController {
     public Button logoutButton;
     private AddMemberController addMemberController=new AddMemberController();
     @FXML
-    private TableColumn<Member, String> colAdress;
+    private TableColumn<MemberDTO, String> colAdress;
 
     @FXML
-    private TableColumn<Member, String> colEmail;
+    private TableColumn<MemberDTO, String> colEmail;
 
     @FXML
-    private TableColumn<Member, String> colMemberId;
+    private TableColumn<MemberDTO, String> colMemberId;
 
     @FXML
-    private TableColumn<Member, String> colName;
+    private TableColumn<MemberDTO, String> colName;
 
     @FXML
-    private TableColumn<Member, String> colPhonenumber;
+    private TableColumn<MemberDTO, String> colPhonenumber;
 
     @FXML
-    private TableView<Member> tblMembers;
+    private TableView<MemberDTO> tblMembers;
 
     @FXML
     private AnchorPane txtAdrss;
 
     @FXML
     void AddMemberbtnOnAction(ActionEvent event) {
-        Stage stage=new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Members/add_member.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
+        SceneManager.switchPage("/view/Members/add_member.fxml");
     }
 
     @FXML
     void BooksbtnOnAction(ActionEvent event) {
-
+        SceneManager.switchPage("/view/Books/book_page.fxml");
     }
 
     @FXML
     void DashboardbtnOnAction(ActionEvent event) {
+        SceneManager.switchPage("/view/Dashboard/home.fxml");
 
     }
 
     @FXML
     void HistorybtnOnAction(ActionEvent event) {
+        SceneManager.switchPage("/view/Books/book_history_page.fxml");
 
     }
 
     @FXML
     void IssuebtnOnAction(ActionEvent event) {
+        SceneManager.switchPage("/view/Books/issue_book_page.fxml");
 
     }
 
     @FXML
     void MemberbtnOnAction(ActionEvent event) {
+        SceneManager.switchPage("/view/Members/member_page.fxml");
 
     }
 
     @FXML
     void ReturnbtnOnAction(ActionEvent event) {
+        SceneManager.switchPage("/view/Books/return_book_page.fxml");
 
     }
     @FXML
@@ -96,8 +91,8 @@ public class MemberPageController {
 
     public void loadMembers() {
       try{
-          List<Member>memberList=addMemberController.getAllMembers();
-          ObservableList<Member> data= FXCollections.observableArrayList(memberList);
+          List<MemberDTO>memberList=addMemberController.getAllMembers();
+          ObservableList<MemberDTO> data= FXCollections.observableArrayList(memberList);
           tblMembers.setItems(data);
       } catch (Exception e) {
           Alert alert = new Alert(Alert.AlertType.ERROR);

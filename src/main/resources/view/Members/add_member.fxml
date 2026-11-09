@@ -105,13 +105,13 @@
                         <String fx:value="btn" />
                      </styleClass></Button>
 
-                        <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="100.0" stylesheets="@../css/btn.css" text="Update">
+                        <Button fx:id="btnUpdate" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="44.0" prefWidth="100.0" stylesheets="@../css/btn.css" text="Update">
                      <styleClass>
                         <String fx:value="btn-update" />
                         <String fx:value="btn" />
                      </styleClass></Button>
 
-                        <Button mnemonicParsing="false" prefHeight="44.0" prefWidth="100.0" stylesheets="@../css/btn.css" text="Delete">
+                        <Button fx:id="btnDelete" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="44.0" prefWidth="100.0" stylesheets="@../css/btn.css" text="Delete">
                      <styleClass>
                         <String fx:value="btn-delete" />
                         <String fx:value="btn" />

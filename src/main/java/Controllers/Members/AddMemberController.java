@@ -1,6 +1,6 @@
 package Controllers.Members;
 
-import Model.Member;
+import Model.MemberDTO;
 import db.DBConnection;
 
 import java.sql.Connection;
@@ -31,14 +31,14 @@ public class AddMemberController {
 
     }
 
-    public List<Member> getAllMembers(){
-        List<Member> members=new ArrayList<>();
+    public List<MemberDTO> getAllMembers(){
+        List<MemberDTO> members=new ArrayList<>();
         String sql="SELECT * FROM members;";
         try {
            PreparedStatement preparedStatement= connection.prepareStatement(sql);
            ResultSet resultSet=preparedStatement.executeQuery();
            while (resultSet.next()){
-              Member member=new Member(
+              MemberDTO member=new MemberDTO(
                       resultSet.getString("member_id"),
                       resultSet.getNString("full_name"),
                       resultSet.getString("email"),
@@ -52,5 +52,33 @@ public class AddMemberController {
 
         }
         return members;
+    }
+
+    public boolean UpdateMember(String name, String email, String adress, String phonenumber) {
+        String sql="UPDATE members SET full_name=?,email=?,phone_number=?,adress=? WHERE member_id=?;" ;
+        try {
+          PreparedStatement preparedStatement=  connection.prepareStatement(sql);
+          preparedStatement.setString(1,name);
+          preparedStatement.setString(2,email);
+          preparedStatement.setString(3,adress);
+          preparedStatement.setString(4,phonenumber);
+
+          return preparedStatement.executeUpdate()>0;
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public boolean deleteMember(String id) {
+        String sql="DELETE FROM members WHERE member_id=?;";
+        try {
+            PreparedStatement preparedStatement=connection.prepareStatement(sql);
+            preparedStatement.setString(1,id);
+            return preparedStatement.executeUpdate()>0;
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }

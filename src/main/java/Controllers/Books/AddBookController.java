@@ -1,6 +1,6 @@
 package Controllers.Books;
 
-import Model.Book;
+import Model.BookDTO;
 import db.DBConnection;
 
 import java.sql.Connection;
@@ -33,8 +33,8 @@ public class AddBookController {
         }
 
     }
-    public List<Book> getAllBooks(){
-        List<Book>books=new ArrayList<>();
+    public List<BookDTO> getAllBooks(){
+        List<BookDTO>books=new ArrayList<>();
         String sql="SELECT * FROM books;";
 
         try {
@@ -43,7 +43,7 @@ public class AddBookController {
             ResultSet resultSet= preparedStatement.executeQuery();
 
             while (resultSet.next()){
-                Book book=new Book(
+                BookDTO book=new BookDTO(
                 resultSet.getString("book_id"),
                 resultSet.getString("book_title"),
                 resultSet.getString("author"),

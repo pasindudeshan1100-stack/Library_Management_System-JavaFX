@@ -56,11 +56,7 @@
                 <Label styleClass="welcome-text" text="Good Afternoon," />
 
                 <Label fx:id="lblUserName" styleClass="welcome-text" text="Pasindu!" />
-            <ImageView fitHeight="53.0" fitWidth="60.0" pickOnBounds="true" smooth="false">
-               <image>
-                  <Image url="@../../images/img_2.png" />
-               </image>
-            </ImageView>
+
             </HBox>
 
             <Label styleClass="welcome-subtitle" text="Welcome back to Smart Library. Keep going, you're doing great!" />

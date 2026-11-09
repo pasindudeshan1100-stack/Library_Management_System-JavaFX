@@ -1,15 +1,16 @@
 package Controllers.Members;
 
+import Model.BookDTO;
+import Model.MemberDTO;
 import com.sun.jdi.connect.spi.Connection;
 import db.DBConnection;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 
 public class AddMemberPageController {
+    public Button btnUpdate;
+    public Button btnDelete;
     AddMemberController addMemberController=new AddMemberController();
 
     @FXML
@@ -74,5 +75,48 @@ public class AddMemberPageController {
     txtAddress.clear();
     }
 
+    public void btnUpdateOnAction(ActionEvent actionEvent) {
+        MemberDTO memberDTO=new MemberDTO(
+                txtMemberId.getText().trim(),
+                txtFullName.getText().trim(),
+                txtEmail.getText().trim(),
+                txtAddress.getText().trim(),
+                txtPhone.getText().trim()
+        );
+        boolean isUpdate= addMemberController.UpdateMember(
+                memberDTO.getName(),
+                memberDTO.getEmail(),
+                memberDTO.getAdress(),
+                memberDTO.getPhonenumber()
+
+        );
+        if (isUpdate){
+            new Alert(Alert.AlertType.INFORMATION," Member updated Successfully!").show();
+            clearfields();
+        }else {
+            new Alert(Alert.AlertType.ERROR,"Failed to update Member.").show();
+        }
+    }
+
+    public void btnDeleteOnAction(ActionEvent actionEvent) {
+        MemberDTO memberDTO=new MemberDTO(
+                txtMemberId.getText().trim(),
+                txtFullName.getText().trim(),
+                txtEmail.getText().trim(),
+                txtAddress.getText().trim(),
+                txtPhone.getText().trim()
+
+        );
+        boolean isDelete= addMemberController.deleteMember(
+               memberDTO.getId()
+
+        );
+        if (isDelete){
+            new Alert(Alert.AlertType.INFORMATION," Member Deleted Successfully!").show();
+            clearfields();
+        }else {
+            new Alert(Alert.AlertType.ERROR,"Failed to delete Member.").show();
+        }
+    }
 }
 

@@ -1,0 +1,39 @@
+[33m5e06daf[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mweek-07[m[33m, [m[1;31morigin/week-07[m[33m)[m HEAD@{0}: checkout: moving from week-06 to week-07
+[33md80a990[m[33m ([m[1;31morigin/week-06[m[33m, [m[1;32mweek-06[m[33m)[m HEAD@{1}: checkout: moving from week-07 to week-06
+[33m5e06daf[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mweek-07[m[33m, [m[1;31morigin/week-07[m[33m)[m HEAD@{2}: checkout: moving from week-07 to week-07
+[33m5e06daf[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mweek-07[m[33m, [m[1;31morigin/week-07[m[33m)[m HEAD@{3}: branch: Reset to origin/week-07
+[33m251de61[m HEAD@{4}: rebase (finish): returning to refs/heads/week-07
+[33m251de61[m HEAD@{5}: rebase (pick): Implement SceneManager and connect all button actions
+[33m5e06daf[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mweek-07[m[33m, [m[1;31morigin/week-07[m[33m)[m HEAD@{6}: rebase (start): checkout origin/week-07
+[33ma43f086[m HEAD@{7}: commit (amend): Implement SceneManager and connect all button actions
+[33m0e5be42[m HEAD@{8}: commit (amend): Implement SceneManager and connect all button actions
+[33m731e797[m HEAD@{9}: reset: moving to HEAD
+[33m731e797[m HEAD@{10}: checkout: moving from week-07 to Week-07
+[33m731e797[m HEAD@{11}: commit: Implement SceneManager and connect all button actions
+[33md80a990[m[33m ([m[1;31morigin/week-06[m[33m, [m[1;32mweek-06[m[33m)[m HEAD@{12}: checkout: moving from week-06 to week-07
+[33md80a990[m[33m ([m[1;31morigin/week-06[m[33m, [m[1;32mweek-06[m[33m)[m HEAD@{13}: commit: modify Book page,Return Book,Issue Page and BookHistory Page
+[33m89c8ca2[m HEAD@{14}: commit: modify member page
+[33m19933fd[m HEAD@{15}: commit: Add alert message for invalid login credentials and all required fields
+[33m009da66[m HEAD@{16}: commit: Implement book deletion functionality with database integration
+[33m3ff8deb[m HEAD@{17}: pull --rebase origin week-06 (finish): returning to refs/heads/week-06
+[33m3ff8deb[m HEAD@{18}: pull --rebase origin week-06 (pick): Fix book update functionality and SQL query syntax
+[33m235c0dd[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{19}: pull --rebase origin week-06 (start): checkout 235c0dd0d1ce74d6f07316a093f4fca76fdf2b12
+[33m3730a68[m HEAD@{20}: commit: Fix book update functionality and SQL query syntax
+[33mc810af7[m[33m ([m[1;31morigin/week-05[m[33m, [m[1;32mweek-05[m[33m)[m HEAD@{21}: checkout: moving from week-05 to week-06
+[33mc810af7[m[33m ([m[1;31morigin/week-05[m[33m, [m[1;32mweek-05[m[33m)[m HEAD@{22}: commit: save books to database and display them in table view
+[33m698f7f6[m HEAD@{23}: commit: save books to database and display them in table view
+[33m5902e8e[m HEAD@{24}: commit: Add book category ComboBox , improve exception and handlingImplement book insertion functionality
+[33m02a49ff[m HEAD@{25}: commit: Modify Member Page
+[33m0af12f2[m HEAD@{26}: commit: Add Member TableView and database integration
+[33mad80ab7[m HEAD@{27}: commit: Fix Add Member functionality and SQL query
+[33m08b45c3[m HEAD@{28}: commit: Modify Add Member Form
+[33md7b12bd[m HEAD@{29}: commit: Modify Dashboard Page
+[33m4baae7f[m HEAD@{30}: commit: Modify Login Page
+[33m6da633f[m HEAD@{31}: commit: integrate database connection into login controller
+[33mc478ec4[m[33m ([m[1;32mmain[m[33m)[m HEAD@{32}: checkout: moving from main to week-05
+[33mc478ec4[m[33m ([m[1;32mmain[m[33m)[m HEAD@{33}: commit: Change
+[33m6b02574[m HEAD@{34}: commit: LoginPageController
+[33mc2134af[m HEAD@{35}: commit: LoginPageController
+[33m99ab2db[m HEAD@{36}: commit: first commit
+[33m96ddb99[m HEAD@{37}: Branch: renamed refs/heads/master to refs/heads/main
+[33m96ddb99[m HEAD@{39}: commit (initial): first commit

@@ -1,14 +1,13 @@
 
 package Controllers.Login;
 
+import Scene.SceneManager;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
+
 
 import java.io.IOException;
 
@@ -44,33 +43,14 @@ public class LoginPageController {
         }
 
         if (loginController.checkNameandPassword(username, password)) {
-            try {
-                FXMLLoader loader = new FXMLLoader(
-                        getClass().getResource("/view/Dashboard/home.fxml")
-                );
 
-                Stage stage = new Stage();
-                stage.setScene(new Scene(loader.load()));
-                stage.setTitle("Library Management System");
-                stage.show();
+                SceneManager.switchPage("/view/Dashboard/home.fxml");
 
-                // Close the login window
-                Stage loginStage = (Stage) txtName.getScene().getWindow();
-                loginStage.close();
-
-            } catch (IOException e) {
-                e.printStackTrace();
-
-                new Alert(
-                        Alert.AlertType.ERROR,
-                        "Unable to open the dashboard."
-                ).showAndWait();
-            }
 
         } else {
             new Alert(
                     Alert.AlertType.ERROR,
-                    "Incorrect username or password. Please try again."
+                    "Unable to Login.Incorrect username or password. Please try again."
             ).showAndWait();
         }
     }

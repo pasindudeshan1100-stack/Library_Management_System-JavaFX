@@ -2,15 +2,12 @@ package Controllers.Dashboard;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
+import Scene.SceneManager;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.stage.Stage;
 
-import java.io.IOException;
 
-public class HomePageController {
+public class HomePageController{
 
     public Label lblUserName;
     @FXML
@@ -19,68 +16,32 @@ public class HomePageController {
 
     @FXML
     void BooksbtnOnAction(ActionEvent event) {
-        Stage stage=new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Books/book_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
+        SceneManager.switchPage("/view/Books/book_page.fxml");
     }
 
     @FXML
     void DashboardbtnOnAction(ActionEvent event) {
-        Stage stage=new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Dashboard/home.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
+        SceneManager.switchPage("/view/Dashboard/home.fxml");
     }
 
     @FXML
     void HistorybtnOnAction(ActionEvent event) {
-        Stage stage=new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Books/book_history_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
+        SceneManager.switchPage("/view/Books/book_history_page.fxml");
     }
 
     @FXML
     void IssuebtnOnAction(ActionEvent event) {
-        Stage stage=new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Books/issue_book_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
+        SceneManager.switchPage("/view/Books/issue_book_page.fxml");
     }
 
     @FXML
     void MemberbtnOnAction(ActionEvent event) {
-        Stage stage=new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Members/member_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
+        SceneManager.switchPage("/view/Members/member_page.fxml");
     }
 
     @FXML
     void ReturnbtnOnAction(ActionEvent event) {
-        Stage stage=new Stage();
-        try {
-            stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Books/return_book_page.fxml"))));
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        stage.show();
+        SceneManager.switchPage("/view/Books/return_book_page.fxml");
     }
 
 }

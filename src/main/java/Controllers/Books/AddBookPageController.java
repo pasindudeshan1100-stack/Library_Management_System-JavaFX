@@ -3,17 +3,23 @@ package Controllers.Books;
 import db.DBConnection;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 
+import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ResourceBundle;
 
-public class AddBookPageController {
+public class AddBookPageController  {
 
+    public Button btnUpdate;
+    public Button btnDelete;
     AddBookController addBookController= new AddBookController();
 
     @FXML
@@ -36,8 +42,8 @@ public class AddBookPageController {
 
     @FXML
     void addBookOnAction(ActionEvent event) {
-        String author= txtAuthor.getText();
         String title=txtBookTitle.getText();
+        String author= txtAuthor.getText();
         String category=cmbCategory.getValue();
         String year=txtPublishedYear.getText();
         String quantity= txtQuantity.getText();
@@ -60,8 +66,8 @@ public class AddBookPageController {
             int bookQuantity = Integer.parseInt(quantity.trim());
 
             boolean isAdded=addBookController.AddBook(
-                    author.trim(),
                     title.trim(),
+                    author.trim(),
                     category.trim(),
                     publishedYear,
                     bookQuantity
@@ -194,6 +200,13 @@ public class AddBookPageController {
       }
      clearFields();
     }
+
+
+
+//    @Override
+//    public void initialize(URL url, ResourceBundle resourceBundle) {
+//
+//    }
 }
 
 

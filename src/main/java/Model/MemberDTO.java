@@ -1,16 +1,14 @@
 package Model;
 
-public class Member {
+public class MemberDTO {
     private  String id;
     private  String name;
     private  String email;
     private String phonenumber;
     private  String adress;
 
-    public Member() {
-    }
 
-    public Member(String id, String name, String email, String phonenumber, String adress) {
+    public MemberDTO(String id, String name, String email, String phonenumber, String adress) {
         this.id = id;
         this.name = name;
         this.email = email;

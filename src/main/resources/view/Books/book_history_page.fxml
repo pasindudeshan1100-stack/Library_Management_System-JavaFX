@@ -19,11 +19,8 @@
             <Insets bottom="20" left="14" right="14" top="25" />
         </padding>
 
-        <ImageView fitHeight="85" fitWidth="180" preserveRatio="true">
-            <image>
-                <Image url="@../../images/img_7.png" />
-            </image>
-        </ImageView>
+        <Label prefHeight="93.0" prefWidth="210.0" styleClass="header-title" stylesheets="@../css/Style.css" text="📚 SMART LIBRARY" textFill="#faebeb" />
+
 
         <Label styleClass="menu-title" text="MENU">
             <VBox.margin><Insets top="12" /></VBox.margin>

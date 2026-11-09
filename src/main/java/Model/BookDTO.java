@@ -1,6 +1,6 @@
 package Model;
 
-public class Book {
+public class BookDTO {
     private String bookid;
     private  String title;
     private  String author;
@@ -10,13 +10,17 @@ public class Book {
 
 
 
-    public Book(String bookid, String title, String author, String category, Integer year, Integer quantity) {
+    public BookDTO(String bookid, String title, String author, String category, Integer year, Integer quantity) {
         this.bookid = bookid;
         this.title = title;
         this.author = author;
         this.category = category;
         this.year = year;
         this.quantity = quantity;
+    }
+
+    public BookDTO() {
+
     }
 
     public String getBookid() {
