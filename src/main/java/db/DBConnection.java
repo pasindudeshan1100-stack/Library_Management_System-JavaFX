@@ -10,11 +10,10 @@ public class DBConnection {
     private   static DBConnection instance;
     private DBConnection(){
         try {
-            connection = DriverManager.getConnection(
-                    "jdbc:mysql://localhost:3306/ library_management_system",
+            connection =DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/library_management_system",
                     "root",
-                    "1234"
-            );
+                    "1234");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }

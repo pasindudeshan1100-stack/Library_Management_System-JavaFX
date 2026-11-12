@@ -2,15 +2,23 @@ package Controllers.Members;
 
 import Model.BookDTO;
 import Model.MemberDTO;
-import com.sun.jdi.connect.spi.Connection;
 import db.DBConnection;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+
+
 public class AddMemberPageController {
     public Button btnUpdate;
     public Button btnDelete;
+
+
     AddMemberController addMemberController=new AddMemberController();
 
     @FXML
@@ -116,6 +124,36 @@ public class AddMemberPageController {
             clearfields();
         }else {
             new Alert(Alert.AlertType.ERROR,"Failed to delete Member.").show();
+        }
+    }
+    public void initialize(){
+        txtMemberId.textProperty().addListener(
+                ((observableValue, oldValue, newValue) -> {
+                    if (newValue==null||newValue.trim().isEmpty()){
+                        clearfields();
+                    }else {
+                        loadMemberDetails(newValue.trim());
+                    }
+                })
+        );
+    }
+    public void loadMemberDetails(String memberId){
+        Connection connection= DBConnection.getInstance().getConnection();
+        String sql="SELECT * FROM members WHERE member_id=?;";
+        try {
+            PreparedStatement preparedStatement=  connection.prepareStatement(sql);
+            preparedStatement.setString(1,memberId);
+
+            ResultSet resultSet= preparedStatement.executeQuery();
+            while (resultSet.next()){
+            txtFullName.setText(resultSet.getString("full_name"));
+            txtEmail.setText(resultSet.getString("email"));
+            txtAddress.setText(resultSet.getString("adress"));
+            txtPhone.setText(resultSet.getString("phone_number"));
+
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
         }
     }
 }

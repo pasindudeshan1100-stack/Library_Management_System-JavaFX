@@ -55,7 +55,12 @@
             <HBox alignment="CENTER_LEFT" prefHeight="38.0" prefWidth="534.0" spacing="10">
                 <Label styleClass="welcome-text" text="Good Afternoon," />
 
-                <Label fx:id="lblUserName" styleClass="welcome-text" text="Pasindu!" />
+                <Label fx:id="lblUserName" styleClass="welcome-text" text="Pasindu" />
+            <ImageView fitHeight="44.0" fitWidth="74.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/img_8.png" />
+               </image>
+            </ImageView>
 
             </HBox>
 
